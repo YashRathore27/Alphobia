@@ -103,8 +103,8 @@ function Footer() {
         <div className="mx-auto flex max-w-[1200px] flex-col gap-10 px-4 py-12 sm:px-8 lg:flex-row lg:justify-between lg:gap-12">
           <div className="max-w-md">
             <div className="flex items-center gap-3">
-              <span className="font-heading text-[24px] font-black tracking-[0.22em] text-slate-900 sm:text-[28px]">
-                ALPHOBIA
+              <span className="font-heading text-[24px] font-black tracking-[0.22em] sm:text-[28px]">
+                <span className="text-slate-900">AL</span><span className="text-indigo-600">PHOBIA</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-600">
