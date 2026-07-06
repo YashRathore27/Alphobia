@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <Link to="/" className="flex items-center gap-2.5" aria-label="Alphobia home">
-              <span className="text-lg font-extrabold tracking-tight text-ink dark:text-white">Alphobia<span className="text-primary">.</span></span>
+              <span className="text-lg font-extrabold tracking-tight text-logo-gradient">Alphobia.</span>
             </Link>
             <p className="mt-4 text-[13px] leading-relaxed text-body">
               The performance marketing platform for verified deals, honest reviews and growth that compounds.

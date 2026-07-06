@@ -3,15 +3,15 @@ import "../styles/marketeam.css";
 import { navigate } from "../router";
 
 const AVATARS = [
-  ["https://polo-pecan-73837341.figma.site/_assets/v11/aa51718fb3af3637e6d666b6543fc27a175fada6.png", 1, 270, 177, "", "mk-avatar--sq", "glow-purple", 0.6],
+  ["https://polo-pecan-73837341.figma.site/_assets/v11/aa51718fb3af3637e6d666b6543fc27a175fada6.png", 1, 270, 177, "", "mk-avatar--sq", "glow-blue", 0.6],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/ca755f7f93c1126fb8bdbf99ab364a33aa9ab272.png", 2, 60, 251, "", "", "glow-yellow", 0.8],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/dc01064c7093dcc32674876ee3cf5e41c4a485c6.png", 2, 180, 251, "mk-avatar--md", "", "glow-pink", 1.0],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/d5470a58b02388336141575048720f19a50de832.png", 2, 300, 251, "", "mk-avatar--sq", "glow-blue", 1.2],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/018736aa5d0275c4ce56cfebaf2ae3007d81ca1e.png", 3, 130, 325, "mk-avatar--lg", "", "glow-pink", 1.4],
-  ["https://polo-pecan-73837341.figma.site/_assets/v11/c76d8a0b99676de31c014344bfaf75bad090758d.png", 4, 30, 399, "", "", "glow-purple", 1.6],
+  ["https://polo-pecan-73837341.figma.site/_assets/v11/c76d8a0b99676de31c014344bfaf75bad090758d.png", 4, 30, 399, "", "", "glow-blue", 1.6],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/7b1b5f039de7b54cc9913e96c1923c3b15a157fa.png", 4, 95, 399, "mk-avatar--lg", "mk-avatar--sq-lg", "glow-orange", 1.85],
   ["https://polo-pecan-73837341.figma.site/_assets/v11/9ae171d8895199349755c43fbff00e122221a027.png", 4, 220, 399, "mk-avatar--lg", "mk-avatar--sq-lg", "glow-pink", 2.1],
-  ["https://polo-pecan-73837341.figma.site/_assets/v11/926c9eb7b4bc1df846fa0e39f0b0dc3fefd80671.png", 4, 320, 399, "", "", "glow-purple", 2.3],
+  ["https://polo-pecan-73837341.figma.site/_assets/v11/926c9eb7b4bc1df846fa0e39f0b0dc3fefd80671.png", 4, 320, 399, "", "", "glow-blue", 2.3],
 ];
 
 const HEADING_TEXT = "Unlock Verified Deals & Marketing Talent You Thought Was Out of Reach — One Click Away!";

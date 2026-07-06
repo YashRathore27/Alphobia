@@ -71,7 +71,7 @@ function EarningsCalculator({ visitors: defVis, conversion: defConv, aov: defAov
     step={step}
     value={value}
     onChange={(e) => setValue(Number(e.target.value))}
-    className="w-full accent-indigo-600"
+    className="w-full accent-blue-600"
   />
     </div>;
   return <div className="rounded-2xl border border-[#EEF2F7] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
@@ -81,7 +81,7 @@ function EarningsCalculator({ visitors: defVis, conversion: defConv, aov: defAov
         <Slider label="Conversion Rate" value={conversion} setValue={setConversion} min={1} max={10} step={0.5} fmt={(n) => `${n}%`} />
         <Slider label="Average Order Value" value={aov} setValue={setAov} min={10} max={500} step={10} fmt={(n) => `$${n}`} />
       </div>
-      <div className="mt-5 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 p-5 text-center">
+      <div className="mt-5 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 p-5 text-center">
         <p className="text-[12px] font-semibold uppercase tracking-wide text-[#6B7280]">
           Estimated Monthly Earnings
         </p>
@@ -99,7 +99,7 @@ function AffiliateDetail({ id }) {
   if (!aff) {
     return <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 p-8 text-center">
         <p className="text-[20px] font-bold text-[#111827]">Program not found</p>
-        <button onClick={() => navigate("home")} className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white">
+        <button onClick={() => navigate("home")} className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white">
           Back to Home
         </button>
       </div>;
@@ -182,14 +182,14 @@ function AffiliateDetail({ id }) {
                     <span className={`text-[15px] font-bold ${s.accent}`}>{s.value}</span>
                   </div>)}
               </div>
-              <button className="mt-5 flex h-[52px] w-full items-center justify-center rounded-xl bg-indigo-600 text-[15px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-700">
+              <button className="mt-5 flex h-[52px] w-full items-center justify-center rounded-xl bg-blue-600 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:bg-blue-700">
                 Join Now
               </button>
               <button
     onClick={() => setSaved(!saved)}
-    className={`mt-3 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl border-2 text-[14px] font-bold transition-all ${saved ? "border-indigo-300 bg-indigo-50 text-indigo-600" : "border-[#E5E7EB] bg-white text-[#6B7280] hover:border-indigo-300 hover:text-indigo-600"}`}
+    className={`mt-3 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl border-2 text-[14px] font-bold transition-all ${saved ? "border-blue-300 bg-blue-50 text-blue-600" : "border-[#E5E7EB] bg-white text-[#6B7280] hover:border-blue-300 hover:text-blue-600"}`}
   >
-                <Bookmark className={`h-4 w-4 ${saved ? "fill-indigo-500 text-indigo-500" : ""}`} />
+                <Bookmark className={`h-4 w-4 ${saved ? "fill-blue-500 text-blue-500" : ""}`} />
                 {saved ? "Program Saved" : "Save Program"}
               </button>
             </div>
@@ -204,10 +204,10 @@ function AffiliateDetail({ id }) {
             {SECTIONS.map((s) => <button
     key={s.id}
     onClick={() => scrollTo(s.id)}
-    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${activeSection === s.id ? "text-indigo-600" : "text-[#6B7280] hover:text-[#111827]"}`}
+    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${activeSection === s.id ? "text-blue-600" : "text-[#6B7280] hover:text-[#111827]"}`}
   >
                 {s.label}
-                {activeSection === s.id && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-indigo-600" />}
+                {activeSection === s.id && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-blue-600" />}
               </button>)}
           </nav>
         </div>
@@ -260,7 +260,7 @@ function AffiliateDetail({ id }) {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-[#E5E7EB]">
-                      {aff.commissionTable.map((r) => <tr key={r.cat} className="transition-colors hover:bg-indigo-50/40">
+                      {aff.commissionTable.map((r) => <tr key={r.cat} className="transition-colors hover:bg-blue-50/40">
                           <td className="px-6 py-4 font-semibold text-[#111827]">{r.cat}</td>
                           <td className="px-6 py-4 font-bold text-emerald-600">{r.rate}</td>
                           <td className="px-6 py-4 text-[#6B7280]">{r.cookie}</td>
@@ -291,7 +291,7 @@ function AffiliateDetail({ id }) {
                 {aff.resources.map((r) => {
     const Icon = RESOURCE_ICONS[r.iconName] || ImageIcon;
     return <button key={r.label} className="rounded-[20px] border border-[#EEF2F7] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                      <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50 text-violet-600">
+                      <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                         <Icon className="h-6 w-6" />
                       </span>
                       <p className="mt-4 text-center text-[14px] font-bold text-[#111827]">{r.label}</p>
@@ -315,7 +315,7 @@ function AffiliateDetail({ id }) {
                 {aff.payouts.map((p) => {
     const Icon = PAYOUT_ICONS[p.iconName] || Banknote;
     return <div key={p.label} className="rounded-[20px] border border-[#EEF2F7] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                      <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                      <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                         <Icon className="h-6 w-6" />
                       </span>
                       <p className="mt-4 text-center text-[14px] font-bold text-[#111827]">{p.label}</p>

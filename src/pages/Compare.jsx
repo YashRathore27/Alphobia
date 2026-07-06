@@ -43,8 +43,8 @@ function Compare() {
   }
         <Reveal>
           <div className="card relative overflow-hidden p-6 sm:p-8">
-            <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-indigo-100/70 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-violet-100/70 blur-3xl" />
+            <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-blue-100/70 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-blue-100/70 blur-3xl" />
             <div className="relative grid items-center gap-6 sm:grid-cols-[1fr_auto_1fr]">
               <div className="flex flex-col items-center gap-3 text-center">
                 <LogoBadge brand={BRANDS.semrush} size={72} />
@@ -53,7 +53,7 @@ function Compare() {
                   <p className="text-[12.5px] text-slate-400">All-in-one Marketing Toolkit</p>
                 </div>
               </div>
-              <span className="gradient-bg mx-auto flex h-14 w-14 items-center justify-center rounded-full text-[14px] font-extrabold text-white shadow-xl shadow-indigo-500/30 ring-8 ring-indigo-50">
+              <span className="gradient-bg mx-auto flex h-14 w-14 items-center justify-center rounded-full text-[14px] font-extrabold text-white shadow-xl shadow-blue-500/30 ring-8 ring-blue-50">
                 VS
               </span>
               <div className="flex flex-col items-center gap-3 text-center">
@@ -77,12 +77,12 @@ function Compare() {
                 <thead>
                   <tr className="bg-slate-50 text-[12px] uppercase tracking-wide text-slate-400">
                     <th className="px-6 py-4 font-bold">Features</th>
-                    <th className="px-6 py-4 text-center font-bold text-indigo-600">Semrush</th>
-                    <th className="px-6 py-4 text-center font-bold text-violet-600">Ahrefs</th>
+                    <th className="px-6 py-4 text-center font-bold text-blue-600">Semrush</th>
+                    <th className="px-6 py-4 text-center font-bold text-blue-600">Ahrefs</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {ROWS.map((r) => <tr key={r.feature} className="transition-colors hover:bg-indigo-50/30">
+                  {ROWS.map((r) => <tr key={r.feature} className="transition-colors hover:bg-blue-50/30">
                       <td className="px-6 py-3.5 text-[13px] font-semibold text-slate-700">
                         {r.feature}
                       </td>
@@ -92,15 +92,15 @@ function Compare() {
                       <td className="px-6 py-3.5 text-center">
                         <CellValue v={r.b} />
                       </td>
-                    </tr>)}
-                  <tr className="bg-gradient-to-r from-indigo-50/60 to-violet-50/60">
+                      </tr>)}
+                  <tr className="bg-gradient-to-r from-blue-50/60 to-blue-50/60">
                     <td className="px-6 py-4 text-[13.5px] font-extrabold text-slate-900">
                       Overall Rating
                     </td>
-                    <td className="px-6 py-4 text-center text-[18px] font-extrabold text-indigo-600">
+                    <td className="px-6 py-4 text-center text-[18px] font-extrabold text-blue-600">
                       4.8/5
                     </td>
-                    <td className="px-6 py-4 text-center text-[18px] font-extrabold text-violet-600">
+                    <td className="px-6 py-4 text-center text-[18px] font-extrabold text-blue-600">
                       4.7/5
                     </td>
                   </tr>
@@ -115,8 +115,8 @@ function Compare() {
   }
         <Reveal>
           <div className="grid gap-6 sm:grid-cols-2">
-            <div className="card flex items-start gap-4 border-indigo-200 bg-gradient-to-br from-indigo-50/70 to-white p-5 ring-1 ring-indigo-100">
-              <span className="gradient-bg flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg shadow-indigo-500/30">
+            <div className="card flex items-start gap-4 border-blue-200 bg-gradient-to-br from-blue-50/70 to-white p-5 ring-1 ring-blue-100">
+              <span className="gradient-bg flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg shadow-blue-500/30">
                 <Trophy className="h-5 w-5" />
               </span>
               <div>
@@ -128,7 +128,7 @@ function Compare() {
               </div>
             </div>
             <div className="card flex items-start gap-4 p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-100 text-violet-600">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
                 <Award className="h-5 w-5" />
               </span>
               <div>
@@ -154,14 +154,14 @@ function Compare() {
               backlink data quality and simplicity matter most to your workflow.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <button className="btn-ripple gradient-bg h-12 rounded-xl px-7 text-[14px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50">
+              <button className="btn-ripple gradient-bg h-12 rounded-xl px-7 text-[14px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:shadow-blue-500/50">
                 Visit Semrush
               </button>
-              <button className="btn-ripple h-12 rounded-xl border border-indigo-200 px-7 text-[14px] font-bold text-indigo-600 transition-all hover:bg-indigo-50">
+              <button className="btn-ripple h-12 rounded-xl border border-blue-200 px-7 text-[14px] font-bold text-blue-600 transition-all hover:bg-blue-50">
                 Visit Ahrefs
               </button>
             </div>
-            <button className="mt-3 text-[13px] font-bold text-indigo-600 hover:text-violet-600">
+            <button className="mt-3 text-[13px] font-bold text-blue-600 hover:text-blue-500">
               View Full Comparison →
             </button>
           </div>

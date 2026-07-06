@@ -20,7 +20,7 @@ function useCountdown(initial) {
 }
 function TimerBlock({ value, label }) {
   return <div className="flex w-[70px] flex-col items-center justify-center rounded-2xl bg-white py-3 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
-      <span className="text-[32px] font-extrabold tabular-nums text-[#5B4CF8] leading-none">{value}</span>
+      <span className="text-[32px] font-extrabold tabular-nums text-[#2563EB] leading-none">{value}</span>
       <span className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#707070]">{label}</span>
     </div>;
 }
@@ -28,8 +28,8 @@ function HeroFlashBanner() {
   const [h, m, s] = useCountdown(6 * 3600 + 48 * 60 + 6);
   return <section className="mx-auto w-full max-w-[1320px] px-4 sm:px-6">
       <div className="relative flex h-[450px] overflow-hidden rounded-[24px] bg-white px-8 py-10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:px-16 items-center">
-        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#5B4CF8]/5 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-20 left-1/3 h-64 w-64 rounded-full bg-[#5B4CF8]/5 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#2563EB]/5 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 left-1/3 h-64 w-64 rounded-full bg-[#2563EB]/5 blur-3xl" />
         
         <div className="relative z-10 grid w-full items-center gap-8 lg:grid-cols-[1fr_360px] text-center lg:text-left">
           <div className="flex flex-col items-center gap-5 lg:items-start">
@@ -38,7 +38,7 @@ function HeroFlashBanner() {
               LIVE FLASH DEALS
             </span>
             <h1 className="text-[44px] font-extrabold leading-[1.1] tracking-tight text-[#101010] sm:text-[56px] lg:text-[62px]">
-              Unmissable. <span className="text-[#5B4CF8]">Urgent.</span> Elite.
+              Unmissable. <span className="text-[#2563EB]">Urgent.</span> Elite.
             </h1>
             <p className="max-w-lg text-[16px] leading-relaxed text-[#707070] sm:text-[18px]">
               Premium tech and SaaS lifetime deals ending in minutes.
@@ -67,7 +67,7 @@ function UpcomingNotification() {
   return <section className="mx-auto w-full max-w-[1320px] px-4 sm:px-6">
       <div className="flex flex-col items-center justify-between gap-4 rounded-[24px] bg-white px-8 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:flex-row">
         <div className="flex items-center gap-4">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#5B4CF8]/10 text-[#5B4CF8]">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2563EB]/10 text-[#2563EB]">
             <Clock className="h-5 w-5" />
           </span>
           <div>
@@ -82,10 +82,10 @@ function UpcomingNotification() {
     value={email}
     onChange={(e) => setEmail(e.target.value)}
     placeholder="Email for notification"
-    className="h-11 w-full rounded-full border border-[#ECECF5] bg-[#F8F8FC] px-5 text-[13px] text-[#101010] outline-none transition-all placeholder:text-[#707070] focus:border-[#5B4CF8] focus:bg-white sm:w-[220px]"
+    className="h-11 w-full rounded-full border border-[#ECECF5] bg-[#F8F8FC] px-5 text-[13px] text-[#101010] outline-none transition-all placeholder:text-[#707070] focus:border-[#2563EB] focus:bg-white sm:w-[220px]"
   />
           </div>
-          <button className="flex h-11 shrink-0 items-center gap-1.5 rounded-full bg-[#5B4CF8] px-6 text-[13px] font-bold text-white transition-all hover:bg-[#4C3DF2]">
+          <button className="flex h-11 shrink-0 items-center gap-1.5 rounded-full bg-[#2563EB] px-6 text-[13px] font-bold text-white transition-all hover:bg-[#1D4ED8]">
             <Mail className="h-4 w-4" /> Remind Me
           </button>
         </div>
@@ -101,14 +101,14 @@ function EndingSoonCard({ deal }) {
         <span className="absolute left-3 top-3 rounded-full bg-red-500 px-3 py-1 text-[11px] font-bold text-white shadow-lg">
           {timerStr}
         </span>
-        <span className="absolute bottom-3 left-3 rounded-full bg-[#5B4CF8] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+        <span className="absolute bottom-3 left-3 rounded-full bg-[#2563EB] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
           {deal.category}
         </span>
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-[22px] font-bold text-[#101010]">{deal.name}</h3>
         <div className="mt-3 flex items-center gap-3">
-          <span className="text-[28px] font-extrabold text-[#5B4CF8]">{deal.currentPrice}</span>
+          <span className="text-[28px] font-extrabold text-[#2563EB]">{deal.currentPrice}</span>
           <span className="text-[15px] text-[#707070] line-through">{deal.originalPrice}</span>
           <span className="rounded-full bg-red-50 px-2.5 py-0.5 text-[12px] font-bold text-red-500">{deal.discountPercent}</span>
         </div>
@@ -124,7 +124,7 @@ function EndingSoonCard({ deal }) {
         </div>
         <button
     onClick={() => navigate("deal", deal.key)}
-    className="mt-5 flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#5B4CF8] py-3 text-[14px] font-bold text-[#5B4CF8] transition-all hover:bg-[#5B4CF8] hover:text-white"
+    className="mt-5 flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#2563EB] py-3 text-[14px] font-bold text-[#2563EB] transition-all hover:bg-[#2563EB] hover:text-white"
   >
           CLAIM DEAL →
         </button>
@@ -139,7 +139,7 @@ function RecentlyAddedCard({ deal }) {
       <div className="flex items-center justify-between px-4 py-3">
         <p className="truncate text-[13px] font-bold text-[#101010]">{deal.name}</p>
         <div className="flex items-center gap-1.5">
-          <span className="text-[14px] font-extrabold text-[#5B4CF8]">{deal.currentPrice}</span>
+          <span className="text-[14px] font-extrabold text-[#2563EB]">{deal.currentPrice}</span>
           <span className="text-[11px] text-[#707070] line-through">{deal.originalPrice}</span>
         </div>
       </div>
@@ -170,7 +170,7 @@ function MostPopularSection() {
             <div className="flex items-center gap-6">
               <button
     onClick={() => navigate("deal", MOST_POPULAR.key)}
-    className="rounded-full bg-[#5B4CF8] px-8 py-3 text-[14px] font-bold text-white transition-all hover:bg-[#4C3DF2]"
+    className="rounded-full bg-[#2563EB] px-8 py-3 text-[14px] font-bold text-white transition-all hover:bg-[#1D4ED8]"
   >
                 GET IT NOW
               </button>
@@ -187,7 +187,7 @@ function MostPopularSection() {
           {
     /* Top Purple Card */
   }
-          <div className="flex h-[170px] flex-col justify-between overflow-hidden rounded-[22px] bg-gradient-to-br from-[#6A5AF9] to-[#4C3DF2] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+          <div className="flex h-[170px] flex-col justify-between overflow-hidden rounded-[22px] bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
             <div>
               <span className="text-[12px] font-bold uppercase tracking-wider text-white/70">Software Spotlight</span>
               <h3 className="mt-1 text-[22px] font-extrabold text-white">AI Image Engine</h3>
@@ -195,11 +195,11 @@ function MostPopularSection() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => <span key={i} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-violet-200 to-purple-300 text-[10px] font-bold text-[#5B4CF8]">
+                {[1, 2, 3].map((i) => <span key={i} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-blue-200 to-blue-300 text-[10px] font-bold text-[#2563EB]">
                     {["JD", "MK", "AL"][i - 1]}
                   </span>)}
               </div>
-              <button className="rounded-full bg-white px-5 py-2 text-[13px] font-bold text-[#5B4CF8] transition-all hover:bg-purple-50">
+              <button className="rounded-full bg-white px-5 py-2 text-[13px] font-bold text-[#2563EB] transition-all hover:bg-blue-50">
                 Claim for $67
               </button>
             </div>
@@ -210,7 +210,7 @@ function MostPopularSection() {
   }
           <div className="flex flex-1 flex-col justify-between rounded-[22px] bg-[#F0EEFF] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
             <div>
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5B4CF8]/10 text-[#5B4CF8]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2563EB]/10 text-[#2563EB]">
                 <Package className="h-5 w-5" />
               </span>
               <h3 className="mt-3 text-[20px] font-bold text-[#101010]">Tech Extras</h3>
@@ -218,7 +218,7 @@ function MostPopularSection() {
             </div>
             <button
     onClick={() => navigate("deals")}
-    className="mt-3 inline-flex items-center gap-1 text-[14px] font-bold text-[#5B4CF8] transition-all hover:gap-2"
+    className="mt-3 inline-flex items-center gap-1 text-[14px] font-bold text-[#2563EB] transition-all hover:gap-2"
   >
               Explore All <ArrowRight className="h-4 w-4" />
             </button>
@@ -273,7 +273,7 @@ function DealListing() {
             </div>
             <button
     onClick={() => navigate("deals")}
-    className="hidden shrink-0 items-center gap-1 text-[14px] font-semibold text-[#5B4CF8] transition-colors hover:text-[#4C3DF2] sm:inline-flex"
+    className="hidden shrink-0 items-center gap-1 text-[14px] font-semibold text-[#2563EB] transition-colors hover:text-[#1D4ED8] sm:inline-flex"
   >
               View All <ArrowRight className="h-4 w-4" />
             </button>
@@ -290,10 +290,10 @@ function DealListing() {
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-[38px] font-extrabold tracking-tight text-[#101010]">Recently Added</h2>
             <div className="flex gap-2">
-              <button onClick={() => scroll("left")} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ECECF5] bg-white text-[#707070] transition-all hover:border-[#5B4CF8] hover:text-[#5B4CF8]">
+              <button onClick={() => scroll("left")} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ECECF5] bg-white text-[#707070] transition-all hover:border-[#2563EB] hover:text-[#2563EB]">
                 <ChevronLeft className="h-5 w-5" />
               </button>
-              <button onClick={() => scroll("right")} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ECECF5] bg-white text-[#707070] transition-all hover:border-[#5B4CF8] hover:text-[#5B4CF8]">
+              <button onClick={() => scroll("right")} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ECECF5] bg-white text-[#707070] transition-all hover:border-[#2563EB] hover:text-[#2563EB]">
                 <ChevronRight className="h-5 w-5" />
               </button>
             </div>

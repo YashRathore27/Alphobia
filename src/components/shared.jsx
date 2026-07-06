@@ -39,7 +39,7 @@ function Breadcrumbs({ items }) {
           {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-slate-300" />}
           {it.route ? <button
     onClick={() => navigate(it.route)}
-    className="font-medium transition-colors hover:text-indigo-600"
+    className="font-medium transition-colors hover:text-blue-600"
   >
               {it.label}
             </button> : <span className="font-semibold text-slate-700">{it.label}</span>}
@@ -57,7 +57,7 @@ function Tabs({
     onClick={() => onChange(t)}
     className={cn(
       "relative shrink-0 px-3 py-2.5 text-[13.5px] font-semibold transition-colors",
-      active === t ? "text-indigo-600" : "text-slate-500 hover:text-slate-800"
+      active === t ? "text-blue-600" : "text-slate-500 hover:text-slate-800"
     )}
   >
           {t}
@@ -77,7 +77,7 @@ function FAQAccordion({ items }) {
             <ChevronDown
     className={cn(
       "h-4 w-4 shrink-0 text-slate-400 transition-transform",
-      open === i && "rotate-180 text-indigo-600"
+      open === i && "rotate-180 text-blue-600"
     )}
   />
           </button>
@@ -94,16 +94,16 @@ function Pagination({ total = 10 }) {
     onClick={() => setPage(p)}
     className={cn(
       "h-10 w-10 rounded-xl text-[13px] font-bold transition-all",
-      page === p ? "gradient-bg text-white shadow-lg shadow-indigo-500/30" : "border border-slate-200 bg-white text-slate-600 hover:border-indigo-300 hover:text-indigo-600"
+      page === p ? "gradient-bg text-white shadow-lg shadow-blue-500/30" : "border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600"
     )}
   >
           {p}
         </button>)}
       <span className="px-1 text-slate-400">…</span>
-      <button className="h-10 w-10 rounded-xl border border-slate-200 bg-white text-[13px] font-bold text-slate-600 hover:border-indigo-300 hover:text-indigo-600">
+      <button className="h-10 w-10 rounded-xl border border-slate-200 bg-white text-[13px] font-bold text-slate-600 hover:border-blue-300 hover:text-blue-600">
         {total}
       </button>
-      <button className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-indigo-300 hover:text-indigo-600">
+      <button className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600">
         <ChevronRight className="h-4 w-4" />
       </button>
     </div>;
@@ -163,11 +163,11 @@ function Countdown({ seconds }) {
     { v: left % 60, l: "Secs" }
   ];
   return <div className="grid grid-cols-3 gap-2">
-      {parts.map((p) => <div key={p.l} className="rounded-xl bg-indigo-50/80 py-2.5 text-center">
-          <p className="text-lg font-extrabold tabular-nums text-indigo-700">
+      {parts.map((p) => <div key={p.l} className="rounded-xl bg-blue-50/80 py-2.5 text-center">
+          <p className="text-lg font-extrabold tabular-nums text-blue-700">
             {String(p.v).padStart(2, "0")}
           </p>
-          <p className="text-[10px] font-semibold text-indigo-400">{p.l}</p>
+          <p className="text-[10px] font-semibold text-blue-400">{p.l}</p>
         </div>)}
     </div>;
 }
@@ -180,10 +180,10 @@ function CouponCode({ code }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2e3);
     }}
-    className="flex w-full items-center justify-between rounded-xl border-2 border-dashed border-indigo-300 bg-indigo-50/60 px-4 py-3 transition-colors hover:bg-indigo-50"
+    className="flex w-full items-center justify-between rounded-xl border-2 border-dashed border-blue-300 bg-blue-50/60 px-4 py-3 transition-colors hover:bg-blue-50"
   >
-      <span className="text-[15px] font-extrabold tracking-widest text-indigo-700">{code}</span>
-      <span className="flex items-center gap-1.5 text-[12px] font-bold text-indigo-500">
+      <span className="text-[15px] font-extrabold tracking-widest text-blue-700">{code}</span>
+      <span className="flex items-center gap-1.5 text-[12px] font-bold text-blue-500">
         {copied ? <Check className="h-4 w-4 text-emerald-500" /> : <Copy className="h-4 w-4" />}
         {copied ? "Copied!" : "Copy"}
       </span>
@@ -202,7 +202,7 @@ function FilterGroup({
   >
             <input
     type="checkbox"
-    className="h-4 w-4 rounded border-slate-300 accent-indigo-600"
+    className="h-4 w-4 rounded border-slate-300 accent-blue-600"
   />
             <span className="flex-1">{o.label}</span>
             {o.count && <span className="text-[11px] text-slate-400">{o.count}</span>}
@@ -215,7 +215,7 @@ function RatingFilterGroup() {
       <p className="font-heading mb-4 text-[13px] font-extrabold text-slate-900">Rating</p>
       <div className="space-y-3">
         {[4.5, 4, 3.5].map((r) => <label key={r} className="flex cursor-pointer items-center gap-2.5">
-            <input type="checkbox" className="h-4 w-4 rounded border-slate-300 accent-indigo-600" />
+            <input type="checkbox" className="h-4 w-4 rounded border-slate-300 accent-blue-600" />
             <Rating value={r} size={12} />
             <span className="text-[12px] text-slate-400">& up</span>
           </label>)}
@@ -244,7 +244,7 @@ function ToolRowCard({ t }) {
         <p className="whitespace-nowrap text-[13px] font-semibold text-slate-500">{t.meta}</p>
         <button
     onClick={() => navigate(t.route ?? "tool", t.id)}
-    className="btn-ripple rounded-xl border-2 border-indigo-500 bg-white px-5 py-2 text-[13px] font-bold text-indigo-600 transition-all hover:bg-indigo-600 hover:text-white"
+    className="btn-ripple rounded-xl border-2 border-blue-500 bg-white px-5 py-2 text-[13px] font-bold text-blue-600 transition-all hover:bg-blue-600 hover:text-white"
     style={{ width: 90 }}
   >
           Visit

@@ -50,7 +50,7 @@ function NewsListing() {
         <Reveal>
           <div className="card relative overflow-hidden p-8 sm:p-10">
             <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-sky-100/60 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-20 right-1/3 h-56 w-56 rounded-full bg-indigo-100/60 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 right-1/3 h-56 w-56 rounded-full bg-blue-100/60 blur-3xl" />
 
             <div className="relative">
               <h1 className="text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px] xl:text-[60px]">
@@ -71,7 +71,7 @@ function NewsListing() {
     value={query}
     onChange={(e) => setQuery(e.target.value)}
     placeholder="Search articles, topics, or trends..."
-    className="h-[52px] w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-5 text-[15px] shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100"
+    className="h-[52px] w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-5 text-[15px] shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-100"
   />
                 </div>
               </div>
@@ -96,7 +96,7 @@ function NewsListing() {
             <select
     value={sort}
     onChange={(e) => setSort(e.target.value)}
-    className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-[13px] font-semibold text-slate-700 outline-none focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100"
+    className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-[13px] font-semibold text-slate-700 outline-none focus:border-blue-300 focus:ring-4 focus:ring-blue-100"
   >
               {["Latest", "Most Popular", "Most Read", "Trending", "Oldest", "Editor's Choice"].map((o) => <option key={o}>{o}</option>)}
             </select>
@@ -134,7 +134,7 @@ function NewsListing() {
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">
-                    <h3 className="text-[15px] font-bold leading-snug text-slate-900 transition-colors group-hover:text-indigo-600">
+                    <h3 className="text-[15px] font-bold leading-snug text-slate-900 transition-colors group-hover:text-blue-600">
                       {a.title}
                     </h3>
                     <p className="mt-3 flex items-center gap-3 text-[12px] text-slate-400">
@@ -146,7 +146,7 @@ function NewsListing() {
                       </span>
                     </p>
                     <div className="mt-auto flex items-center pt-4">
-                      <span className="flex items-center gap-1 text-[13px] font-bold text-indigo-600 transition-all group-hover:gap-2">
+                      <span className="flex items-center gap-1 text-[13px] font-bold text-blue-600 transition-all group-hover:gap-2">
                         Read More <ChevronRight className="h-3.5 w-3.5" />
                       </span>
                     </div>
@@ -177,7 +177,7 @@ function NewsListing() {
               {CATEGORY_PILLS.map((cat) => <span
     key={cat}
     onClick={() => setQuery(cat)}
-    className="cursor-pointer rounded-full border border-indigo-200 bg-indigo-50/60 px-4 py-1.5 text-[12.5px] font-semibold text-indigo-700 transition-all hover:border-indigo-400 hover:bg-indigo-100 hover:text-indigo-800"
+    className="cursor-pointer rounded-full border border-blue-200 bg-blue-50/60 px-4 py-1.5 text-[12.5px] font-semibold text-blue-700 transition-all hover:border-blue-400 hover:bg-blue-100 hover:text-blue-800"
   >
                   {cat}
                 </span>)}

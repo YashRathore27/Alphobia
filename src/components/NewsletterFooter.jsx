@@ -6,9 +6,9 @@ function Newsletter() {
   const [sent, setSent] = useState(false);
   return <section className="mx-auto max-w-[1440px] px-4 pb-14 pt-4 sm:px-8 lg:pb-16">
       <Reveal>
-        <div className="gradient-bg relative overflow-hidden rounded-[28px] px-6 py-10 shadow-2xl shadow-indigo-500/30 sm:px-12">
+        <div className="gradient-bg relative overflow-hidden rounded-[28px] px-6 py-10 shadow-2xl shadow-blue-500/30 sm:px-12">
           <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-2xl" />
-          <div className="pointer-events-none absolute -bottom-24 right-10 h-64 w-64 rounded-full bg-violet-400/30 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 right-10 h-64 w-64 rounded-full bg-blue-400/30 blur-3xl" />
           <div className="relative flex flex-col items-center gap-8 lg:flex-row lg:gap-8">
             <img
     src="/images/newsletter-woman-removebg-preview.png"
@@ -20,7 +20,7 @@ function Newsletter() {
               <h2 className="text-[26px] font-extrabold tracking-tight text-white sm:text-[32px]">
                 Never Miss New Marketing Deals!
               </h2>
-              <p className="mt-2 max-w-md text-[15px] leading-relaxed text-indigo-100">
+              <p className="mt-2 max-w-md text-[15px] leading-relaxed text-blue-100">
                 Subscribe to get the best marketing deals, offers and news straight to your inbox.
               </p>
             </div>
@@ -40,16 +40,16 @@ function Newsletter() {
     value={email}
     onChange={(e) => setEmail(e.target.value)}
     placeholder="Enter your email address"
-    className="h-[52px] flex-1 rounded-xl border border-white/25 bg-white/15 px-5 text-sm text-white outline-none backdrop-blur placeholder:text-indigo-200 focus:border-white/60 focus:ring-4 focus:ring-white/20"
+    className="h-[52px] flex-1 rounded-xl border border-white/25 bg-white/15 px-5 text-sm text-white outline-none backdrop-blur placeholder:text-blue-200 focus:border-white/60 focus:ring-4 focus:ring-white/20"
   />
                   <button
     type="submit"
-    className="btn-ripple h-[52px] shrink-0 rounded-xl bg-white px-6 text-sm font-extrabold text-indigo-600 shadow-lg transition-transform hover:scale-[1.03]"
+    className="btn-ripple h-[52px] shrink-0 rounded-xl bg-white px-6 text-sm font-extrabold text-blue-600 shadow-lg transition-transform hover:scale-[1.03]"
   >
                     Subscribe Now
                   </button>
                 </div>}
-              <p className="mt-2 text-center text-[12px] text-indigo-200 sm:text-left">
+              <p className="mt-2 text-center text-[12px] text-blue-200 sm:text-left">
                 No spam. Unsubscribe anytime.
               </p>
             </form>
@@ -104,7 +104,7 @@ function Footer() {
           <div className="max-w-md">
             <div className="flex items-center gap-3">
               <span className="font-heading text-[24px] font-black tracking-[0.22em] sm:text-[28px]">
-                <span className="text-slate-900">AL</span><span className="text-indigo-600">PHOBIA</span>
+                <span className="text-slate-900">AL</span><span className="text-blue-600">PHOBIA</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-600">

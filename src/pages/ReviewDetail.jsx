@@ -48,13 +48,13 @@ function ReviewDetail({ id }) {
       <section className="mx-auto max-w-[1440px] px-4 pt-8 sm:px-8">
         <Reveal>
           <div className="card relative overflow-hidden p-8 sm:p-10">
-            <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-100/30 blur-3xl" />
+            <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-100/30 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-20 left-1/4 h-48 w-48 rounded-full bg-blue-100/20 blur-3xl" />
 
             <div className="relative flex flex-wrap items-start justify-between gap-6">
               <div className="max-w-3xl">
                 <div className="flex flex-wrap items-center gap-3">
-                  {review.recommended && <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-600 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
+                  {review.recommended && <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
                       <Award className="h-3.5 w-3.5" /> Editor's Choice
                     </span>}
                   <span className="inline-flex items-center gap-1 text-[14px] font-bold text-amber-500">
@@ -117,15 +117,15 @@ function ReviewDetail({ id }) {
     return <button
       key={s}
       onClick={() => scrollTo(s)}
-      className={`relative flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-[12.5px] font-semibold transition-all ${isActive ? "text-purple-600" : "text-slate-500 hover:text-slate-800"}`}
+      className={`relative flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-[12.5px] font-semibold transition-all ${isActive ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}`}
     >
                     <span
-      className={`relative z-10 h-[22px] w-[22px] shrink-0 rounded-full text-[10px] font-extrabold flex items-center justify-center transition-all ${isActive ? "bg-purple-600 text-white shadow-sm" : "bg-slate-100 text-slate-400"}`}
+      className={`relative z-10 h-[22px] w-[22px] shrink-0 rounded-full text-[10px] font-extrabold flex items-center justify-center transition-all ${isActive ? "bg-blue-600 text-white shadow-sm" : "bg-slate-100 text-slate-400"}`}
     >
                       {TOC_SECTIONS.indexOf(s) + 1}
                     </span>
                     <span>{s}</span>
-                    {isActive && <span className="absolute left-[11px] top-0 z-10 h-full w-px bg-purple-600" />}
+                    {isActive && <span className="absolute left-[11px] top-0 z-10 h-full w-px bg-blue-600" />}
                   </button>;
   })}
             </nav>
@@ -158,8 +158,8 @@ function ReviewDetail({ id }) {
   />
                     <defs>
                       <linearGradient id="scoreGradient" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0" stopColor="#6D4CFF" />
-                        <stop offset="1" stopColor="#7B61FF" />
+                        <stop offset="0" stopColor="#2563EB" />
+                        <stop offset="1" stopColor="#3B82F6" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -168,18 +168,18 @@ function ReviewDetail({ id }) {
                     <p className="text-[11px] font-semibold text-slate-400">Out of 5</p>
                   </div>
                 </div>
-                <p className="mt-2 text-[13px] font-bold text-purple-600">Outstanding</p>
+                <p className="mt-2 text-[13px] font-bold text-blue-600">Outstanding</p>
               </div>
               <div className="space-y-4">
                 <p className="font-heading text-[15px] font-extrabold text-slate-900">Rating Breakdown</p>
                 {review.scores.map((s) => <div key={s.label}>
                     <div className="mb-1.5 flex items-center justify-between">
-                      <span className="text-[13px] font-semibold text-slate-600">{s.label}</span>
+                       <span className="text-[13px] font-semibold text-slate-600">{s.label}</span>
                       <span className="text-[13px] font-extrabold text-slate-900">{s.value.toFixed(1)}</span>
                     </div>
                     <div className="h-2.5 overflow-hidden rounded-full bg-slate-100">
                       <div
-    className="h-full rounded-full bg-gradient-to-r from-purple-500 to-purple-400"
+    className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-400"
     style={{ width: `${s.value / 5 * 100}%` }}
   />
                     </div>
@@ -282,8 +282,8 @@ function ReviewDetail({ id }) {
     { plan: "Basic", price: "$127/mo", users: "1 User", desc: "Core funnel builder with essential templates." },
     { plan: "Pro", price: "$157/mo", users: "3 Users", desc: "Unlimited funnels, templates, and priority support.", popular: true },
     { plan: "Enterprise", price: "$208/mo", users: "5+ Users", desc: "Advanced features, CRM, and dedicated account manager." }
-  ].map((p) => <div key={p.plan} className={`relative rounded-xl border p-5 ${p.popular ? "border-purple-200 bg-purple-50/40 shadow-sm" : "border-slate-100 bg-white shadow-sm"}`}>
-                    {p.popular && <span className="absolute -top-2.5 left-4 rounded-full bg-purple-600 px-3 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white">
+  ].map((p) => <div key={p.plan} className={`relative rounded-xl border p-5 ${p.popular ? "border-blue-200 bg-blue-50/40 shadow-sm" : "border-slate-100 bg-white shadow-sm"}`}>
+                    {p.popular && <span className="absolute -top-2.5 left-4 rounded-full bg-blue-600 px-3 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white">
                         Popular
                       </span>}
                     <h3 className="text-[15px] font-extrabold text-slate-900">{p.plan}</h3>
@@ -307,7 +307,7 @@ function ReviewDetail({ id }) {
     { metric: "Loading Speed", value: "< 2s", desc: "Fast page load times" },
     { metric: "Conversion Rate", value: "4.2%", desc: "Average funnel conversion" }
   ].map((m) => <div key={m.metric} className="card flex flex-col items-center p-5 text-center">
-                    <p className="text-[28px] font-extrabold text-purple-600">{m.value}</p>
+                    <p className="text-[28px] font-extrabold text-blue-600">{m.value}</p>
                     <p className="mt-1 text-[14px] font-bold text-slate-900">{m.metric}</p>
                     <p className="mt-1 text-[12px] text-slate-400">{m.desc}</p>
                   </div>)}
@@ -330,7 +330,7 @@ function ReviewDetail({ id }) {
                     <LogoBadge brand={getBrand(r.brandKey)} size={52} />
                     <p className="mt-3 text-[14px] font-bold text-slate-900">{r.name}</p>
                     <Rating value={r.rating} className="mt-1" size={11} />
-                    <span className="mt-2 text-[12px] font-semibold text-purple-600">Read Review →</span>
+                    <span className="mt-2 text-[12px] font-semibold text-blue-600">Read Review →</span>
                   </button>)}
               </div>
             </div>
@@ -341,11 +341,11 @@ function ReviewDetail({ id }) {
   }
           <Reveal>
             <div id="section-Final Verdict">
-              <div className="card relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-50/40 p-8 sm:p-10">
-                <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-purple-200/30 blur-3xl" />
+              <div className="card relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50/40 p-8 sm:p-10">
+                <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-200/30 blur-3xl" />
                 <div className="relative flex flex-col items-center text-center">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-100">
-                    <Trophy className="h-8 w-8 text-purple-600" />
+                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100">
+                    <Trophy className="h-8 w-8 text-blue-600" />
                   </span>
                   <h2 className="mt-4 text-[28px] font-extrabold tracking-tight text-slate-900 sm:text-[36px]">Final Verdict</h2>
                   <p className="mt-4 max-w-2xl text-[16px] leading-[1.8] text-slate-500">
@@ -354,7 +354,7 @@ function ReviewDetail({ id }) {
                   <p className="mt-4 text-[15px] font-bold text-slate-900">
                     {review.recommended ? `We highly recommend ${brandName} for anyone looking to build and optimize their marketing funnels.` : "Consider your options before choosing."}
                   </p>
-                  <button className="btn-ripple mt-6 inline-flex h-[52px] items-center gap-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 px-8 text-[15px] font-bold text-white shadow-[0_8px_24px_rgba(109,76,255,0.25)] transition-all hover:brightness-105 hover:shadow-[0_12px_30px_rgba(109,76,255,0.35)]">
+                  <button className="btn-ripple mt-6 inline-flex h-[52px] items-center gap-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-8 text-[15px] font-bold text-white shadow-[0_8px_24px_rgba(37,99,235,0.25)] transition-all hover:brightness-105 hover:shadow-[0_12px_30px_rgba(37,99,235,0.35)]">
                     Start Your 14-Day Free Trial
                     <ExternalLink className="h-4 w-4" />
                   </button>
@@ -372,7 +372,7 @@ function ReviewDetail({ id }) {
     /* Summary Card */
   }
           <Reveal>
-            <div className="card border-purple-200 bg-gradient-to-b from-purple-50/60 to-white p-5 ring-1 ring-purple-100">
+            <div className="card border-blue-200 bg-gradient-to-b from-blue-50/60 to-white p-5 ring-1 ring-blue-100">
               <div className="flex flex-col items-center text-center">
                 <p className="text-[36px] font-extrabold text-slate-900">{review.score.toFixed(1)}</p>
                 <div className="mt-1 inline-flex">
@@ -385,7 +385,7 @@ function ReviewDetail({ id }) {
               </div>
               <p className="mt-3 text-[12.5px] font-bold text-slate-900">Our Summary</p>
               <p className="mt-1 text-[12.5px] leading-relaxed text-slate-500">{review.verdict.slice(0, 120)}...</p>
-              <button className="btn-ripple mt-4 w-full rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 py-3 text-[13.5px] font-bold text-white shadow-[0_6px_20px_rgba(109,76,255,0.25)] transition-all hover:brightness-105">
+              <button className="btn-ripple mt-4 w-full rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 py-3 text-[13.5px] font-bold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-all hover:brightness-105">
                 Visit {brandName} →
               </button>
               <p className="mt-2 text-[11px] text-slate-400">
@@ -404,7 +404,7 @@ function ReviewDetail({ id }) {
                 {review.related.map((r) => <button
     key={r.name}
     onClick={() => navigate("review", r.brandKey)}
-    className="flex w-full items-center gap-3 rounded-2xl border border-slate-100 p-3 text-left transition-all hover:border-purple-200 hover:bg-purple-50/40"
+    className="flex w-full items-center gap-3 rounded-2xl border border-slate-100 p-3 text-left transition-all hover:border-blue-200 hover:bg-blue-50/40"
   >
                     <LogoBadge brand={getBrand(r.brandKey)} size={38} />
                     <div className="flex-1">

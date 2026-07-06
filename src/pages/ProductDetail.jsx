@@ -108,7 +108,7 @@ function ProductDetail({ id }) {
   if (!product) {
     return <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 p-8 text-center">
         <p className="text-[20px] font-bold text-[#111827]">Product not found</p>
-        <button onClick={() => navigate("home")} className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white">
+        <button onClick={() => navigate("home")} className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white">
           Back to Home
         </button>
       </div>;
@@ -165,22 +165,22 @@ function ProductDetail({ id }) {
                     {product.description}
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-3">
-                    <button className="flex h-[52px] w-[220px] items-center justify-center gap-2 rounded-xl bg-indigo-600 text-[15px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-700 hover:shadow-xl">
+                    <button className="flex h-[52px] w-[220px] items-center justify-center gap-2 rounded-xl bg-blue-600 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:bg-blue-700 hover:shadow-xl">
                       Buy Now
                       <ArrowRight className="h-4 w-4" />
                     </button>
                     <button
     onClick={() => navigate("compare")}
-    className="flex h-[52px] items-center gap-2 rounded-xl border-2 border-[#E5E7EB] bg-white px-6 text-[14px] font-bold text-[#111827] transition-all hover:border-indigo-300 hover:text-indigo-600"
+    className="flex h-[52px] items-center gap-2 rounded-xl border-2 border-[#E5E7EB] bg-white px-6 text-[14px] font-bold text-[#111827] transition-all hover:border-blue-300 hover:text-blue-600"
   >
                       <GitCompareArrows className="h-4 w-4" /> Compare
                     </button>
                     <button
     onClick={() => setSaved(!saved)}
-    className={`flex h-[52px] w-[52px] items-center justify-center rounded-xl border-2 transition-all ${saved ? "border-indigo-300 bg-indigo-50 text-indigo-600" : "border-[#E5E7EB] bg-white text-[#6B7280] hover:border-indigo-300 hover:text-indigo-600"}`}
+    className={`flex h-[52px] w-[52px] items-center justify-center rounded-xl border-2 transition-all ${saved ? "border-blue-300 bg-blue-50 text-blue-600" : "border-[#E5E7EB] bg-white text-[#6B7280] hover:border-blue-300 hover:text-blue-600"}`}
     aria-label="Bookmark"
   >
-                      <Bookmark className={`h-5 w-5 ${saved ? "fill-indigo-500" : ""}`} />
+                      <Bookmark className={`h-5 w-5 ${saved ? "fill-blue-500" : ""}`} />
                     </button>
                   </div>
                 </div>
@@ -207,10 +207,10 @@ function ProductDetail({ id }) {
             {SECTIONS.map((s) => <button
     key={s.id}
     onClick={() => scrollTo(s.id)}
-    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${activeSection === s.id ? "text-indigo-600" : "text-[#6B7280] hover:text-[#111827]"}`}
+    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${activeSection === s.id ? "text-blue-600" : "text-[#6B7280] hover:text-[#111827]"}`}
   >
                 {s.label}
-                {activeSection === s.id && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-indigo-600" />}
+                {activeSection === s.id && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-blue-600" />}
               </button>)}
           </nav>
         </div>
@@ -248,7 +248,7 @@ function ProductDetail({ id }) {
     src={src}
     alt=""
     onClick={() => setViewerSrc(src)}
-    className="h-20 w-20 shrink-0 cursor-pointer rounded-xl border border-[#EEF2F7] object-cover shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all hover:border-indigo-300 hover:shadow-md"
+    className="h-20 w-20 shrink-0 cursor-pointer rounded-xl border border-[#EEF2F7] object-cover shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all hover:border-blue-300 hover:shadow-md"
   />)}
                   </div>}
               </div>
@@ -273,7 +273,7 @@ function ProductDetail({ id }) {
       className="rounded-[16px] border border-[#EEF2F7] bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
       style={{ minHeight: 90 }}
     >
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                         <Icon className="h-5 w-5" />
                       </span>
                       <p className="mt-3 text-[15px] font-bold text-[#111827]">{f.name}</p>
@@ -297,9 +297,9 @@ function ProductDetail({ id }) {
               <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {product.variants.map((v) => <div
     key={v.name}
-    className={`relative rounded-[20px] border bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${v.popular ? "border-indigo-500 ring-2 ring-indigo-500" : "border-[#EEF2F7]"}`}
+    className={`relative rounded-[20px] border bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${v.popular ? "border-blue-500 ring-2 ring-blue-500" : "border-[#EEF2F7]"}`}
   >
-                    {v.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-indigo-600 px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-lg">
+                    {v.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-lg">
                         Popular
                       </span>}
                     <p className="text-[16px] font-bold text-[#111827]">{v.name}</p>
@@ -308,7 +308,7 @@ function ProductDetail({ id }) {
                     </p>
                     <p className="mt-3 text-[14px] leading-relaxed text-[#6B7280]">{v.desc}</p>
                     <button
-    className={`mt-5 w-full rounded-xl py-3 text-[14px] font-bold transition-all ${v.popular ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-700" : "border-2 border-[#E5E7EB] bg-white text-[#111827] hover:border-indigo-300 hover:text-indigo-600"}`}
+    className={`mt-5 w-full rounded-xl py-3 text-[14px] font-bold transition-all ${v.popular ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30 hover:bg-blue-700" : "border-2 border-[#E5E7EB] bg-white text-[#111827] hover:border-blue-300 hover:text-blue-600"}`}
   >
                       {v.cta}
                     </button>
@@ -362,7 +362,7 @@ function ProductDetail({ id }) {
                     <Rating value={a.rating} size={12} className="mt-1.5 justify-center" />
                     <button
     onClick={() => navigate("product", a.brandKey)}
-    className="mt-4 w-full rounded-xl border-2 border-[#E5E7EB] bg-white py-2.5 text-[13px] font-bold text-[#111827] transition-all hover:border-indigo-300 hover:text-indigo-600"
+    className="mt-4 w-full rounded-xl border-2 border-[#E5E7EB] bg-white py-2.5 text-[13px] font-bold text-[#111827] transition-all hover:border-blue-300 hover:text-blue-600"
   >
                       View Product
                     </button>

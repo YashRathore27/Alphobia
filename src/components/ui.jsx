@@ -163,19 +163,22 @@ function SectionHeading({
 }) {
   return <Reveal
     className={cn(
-      "mb-8 flex items-end justify-between gap-4",
+      "mb-8 flex items-center justify-between gap-5 w-full",
       center && "flex-col items-center text-center"
     )}
   >
-      <div>
-        <h2 className="text-[26px] font-extrabold tracking-tight text-slate-900 sm:text-[34px]">
-          {title}
-        </h2>
+      <div className="flex-grow w-full">
+        <div className="flex items-center gap-4 w-full">
+          <h2 className="text-[26px] font-extrabold tracking-tight text-slate-900 sm:text-[34px] shrink-0">
+            {title}
+          </h2>
+          {!center && <div className="h-[1.5px] flex-grow hidden sm:block" style={{ backgroundColor: "#B8ADAD" }} />}
+        </div>
         {subtitle && <p className="mt-2 text-slate-500">{subtitle}</p>}
       </div>
       {linkLabel && <button
     onClick={() => linkRoute ? navigate(linkRoute) : window.history.back()}
-    className="group hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-indigo-600 transition-colors hover:text-violet-600 sm:inline-flex"
+    className="group hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-500 sm:inline-flex"
   >
           {linkLabel}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -507,14 +510,12 @@ function ChatGPTLogo({ size = 44 }) {
     </span>;
 }
 function AhrefsLogo({ size = 44 }) {
-  return <span
-    className="inline-flex shrink-0 items-center justify-center rounded-2xl bg-[#054ADA] shadow-sm"
+  return <img
+    src="/images/AhrefsLogo.png"
+    alt="Ahrefs Logo"
+    className="inline-flex shrink-0 object-contain rounded-2xl"
     style={{ width: size, height: size }}
-  >
-      <svg width={size * 0.48} height={size * 0.48} viewBox="0 0 48 48">
-        <path fill="#fff" d="M15 10v28h6V26h6v12h6V10h-6v12h-6V10h-6z" />
-      </svg>
-    </span>;
+  />;
 }
 function MailchimpLogo({ size = 44 }) {
   return <span

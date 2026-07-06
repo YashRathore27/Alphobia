@@ -24,8 +24,8 @@ const NAV = [
   { icon: Settings, label: "Settings" }
 ];
 const STATS = [
-  { icon: Heart, label: "Saved Deals", value: 25, color: "bg-indigo-50 text-indigo-600" },
-  { icon: Bookmark, label: "Bookmarks", value: 18, color: "bg-violet-50 text-violet-600" },
+  { icon: Heart, label: "Saved Deals", value: 25, color: "bg-blue-50 text-blue-600" },
+  { icon: Bookmark, label: "Bookmarks", value: 18, color: "bg-blue-50 text-blue-600" },
   { icon: Star, label: "Reviews", value: 7, color: "bg-rose-50 text-rose-500" },
   { icon: MousePointerClick, label: "Affiliate Clicks", value: 142, color: "bg-emerald-50 text-emerald-600" }
 ];
@@ -57,7 +57,7 @@ function Dashboard() {
     /* Sidebar */
   }
         <aside className="card p-4 lg:sticky lg:top-28">
-          <div className="mb-3 flex items-center gap-3 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 p-3">
+          <div className="mb-3 flex items-center gap-3 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 p-3">
             <img
     src="/images/avatar.png"
     alt="John Doe"
@@ -72,7 +72,7 @@ function Dashboard() {
             {NAV.map((n) => <button
     key={n.label}
     onClick={() => setActive(n.label)}
-    className={`flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-[13px] font-semibold transition-all ${active === n.label ? "gradient-bg text-white shadow-lg shadow-indigo-500/25" : "text-slate-600 hover:bg-indigo-50 hover:text-indigo-600"}`}
+    className={`flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-[13px] font-semibold transition-all ${active === n.label ? "gradient-bg text-white shadow-lg shadow-blue-500/25" : "text-slate-600 hover:bg-blue-50 hover:text-blue-600"}`}
   >
                 <n.icon className="h-4 w-4" />
                 <span className="flex-1 text-left">{n.label}</span>
@@ -95,14 +95,14 @@ function Dashboard() {
           <div className="mt-3 rounded-2xl border border-slate-100 p-4">
             <div className="flex items-center justify-between text-[12px] font-bold">
               <span className="text-slate-700">Profile Completion</span>
-              <span className="text-indigo-600">72%</span>
+              <span className="text-blue-600">72%</span>
             </div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-100">
               <div className="gradient-bg h-full w-[72%] rounded-full" />
             </div>
             <button
     onClick={() => navigate("profile")}
-    className="mt-3 w-full rounded-xl border border-indigo-200 py-2 text-[11.5px] font-bold text-indigo-600 hover:bg-indigo-50"
+    className="mt-3 w-full rounded-xl border border-blue-200 py-2 text-[11.5px] font-bold text-blue-600 hover:bg-blue-50"
   >
               Complete Profile
             </button>
@@ -117,12 +117,12 @@ function Dashboard() {
     /* Welcome banner */
   }
           <Reveal>
-            <div className="gradient-bg relative overflow-hidden rounded-[20px] p-7 shadow-xl shadow-indigo-500/25 sm:p-8">
+            <div className="gradient-bg relative overflow-hidden rounded-[20px] p-7 shadow-xl shadow-blue-500/25 sm:p-8">
               <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
               <h1 className="text-[22px] font-extrabold text-white sm:text-[26px]">
                 Welcome back, John! 👋
               </h1>
-              <p className="mt-1 text-[13.5px] text-indigo-100">
+              <p className="mt-1 text-[13.5px] text-blue-100">
                 Here's what's happening today.
               </p>
             </div>
@@ -162,7 +162,7 @@ function Dashboard() {
                     {CLICKS.map((c, i) => <div key={i} className="flex flex-1 flex-col items-center gap-2">
                         <div className="flex w-full flex-1 items-end">
                           <div
-    className={`w-full rounded-t-lg transition-all ${i === 5 ? "gradient-bg" : "bg-indigo-100 hover:bg-indigo-200"}`}
+    className={`w-full rounded-t-lg transition-all ${i === 5 ? "gradient-bg" : "bg-blue-100 hover:bg-blue-200"}`}
     style={{ height: `${c}%` }}
   />
                         </div>
@@ -225,7 +225,7 @@ function Dashboard() {
                 <div className="space-y-3">
                   {OFFERS.map((o) => <div
     key={o.name}
-    className="flex items-center gap-3 rounded-2xl border border-slate-100 p-3.5 transition-all hover:border-indigo-200 hover:bg-indigo-50/40"
+    className="flex items-center gap-3 rounded-2xl border border-slate-100 p-3.5 transition-all hover:border-blue-200 hover:bg-blue-50/40"
   >
                       <LogoBadge brand={o.brand} size={40} />
                       <div className="min-w-0 flex-1">
@@ -234,7 +234,7 @@ function Dashboard() {
                       </div>
                       <button
     onClick={() => navigate("deal", o.id)}
-    className="shrink-0 rounded-xl border border-indigo-200 px-3.5 py-2 text-[11px] font-bold text-indigo-600 transition-all hover:bg-indigo-600 hover:text-white"
+    className="shrink-0 rounded-xl border border-blue-200 px-3.5 py-2 text-[11px] font-bold text-blue-600 transition-all hover:bg-blue-600 hover:text-white"
   >
                         View Deal
                       </button>
@@ -242,7 +242,7 @@ function Dashboard() {
                 </div>
                 <button
     onClick={() => navigate("category")}
-    className="mt-3 w-full rounded-xl bg-indigo-50 py-2.5 text-[12.5px] font-bold text-indigo-600 transition-colors hover:bg-indigo-100"
+    className="mt-3 w-full rounded-xl bg-blue-50 py-2.5 text-[12.5px] font-bold text-blue-600 transition-colors hover:bg-blue-100"
   >
                   View All Offers →
                 </button>

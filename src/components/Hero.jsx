@@ -76,7 +76,7 @@ function Hero() {
       visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
     }}
   >
-                  <button className="btn-ripple inline-flex h-[52px] items-center gap-2.5 rounded-full bg-indigo-600 px-8 text-[16px] font-bold text-white shadow-xl shadow-indigo-500/30 transition-all hover:bg-indigo-700 hover:shadow-indigo-500/50">
+                  <button className="btn-ripple inline-flex h-[52px] items-center gap-2.5 rounded-full bg-blue-600 px-8 text-[16px] font-bold text-white shadow-xl shadow-blue-500/30 transition-all hover:bg-blue-700 hover:shadow-blue-500/50">
                     Explore Deals <ArrowRight className="h-4 w-4" />
                   </button>
                 </motion.div>
@@ -94,14 +94,14 @@ function Hero() {
                   {Array.from({ length: TOTAL }).map((_, i) => <button
     key={i}
     onClick={() => setSlide(i)}
-    className={`h-2.5 rounded-full transition-all duration-300 ${i === slide ? "w-8 bg-indigo-600" : "w-2.5 border border-slate-300 bg-white"}`}
+    className={`h-2.5 rounded-full transition-all duration-300 ${i === slide ? "w-8 bg-blue-600" : "w-2.5 border border-slate-300 bg-white"}`}
   />)}
                   <span className="ml-4 text-[13px] font-semibold text-slate-400">
                     {String(slide + 1).padStart(2, "0")}
                   </span>
                   <button
     onClick={() => setSlide((slide + 1) % TOTAL)}
-    className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all hover:border-indigo-300 hover:text-indigo-600"
+    className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all hover:border-blue-300 hover:text-blue-600"
   >
                     <ChevronRight className="h-4 w-4" />
                   </button>
@@ -120,10 +120,10 @@ function Hero() {
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.5 }}
-    className="absolute bottom-8 right-8 z-10 w-[200px] rounded-[20px] bg-white/95 p-4 shadow-xl shadow-indigo-900/10 backdrop-blur-md"
-    whileHover={{ y: -4, boxShadow: "0 24px 48px rgba(79,70,229,0.15)" }}
+    className="absolute bottom-8 right-8 z-10 w-[200px] rounded-[20px] bg-white/95 p-4 shadow-xl shadow-blue-900/10 backdrop-blur-md"
+    whileHover={{ y: -4, boxShadow: "0 24px 48px rgba(37,99,235,0.15)" }}
   >
-                <p className="flex items-center gap-1 text-[11px] font-semibold text-indigo-600">
+                <p className="flex items-center gap-1 text-[11px] font-semibold text-blue-600">
                   Know More <ChevronRight className="h-3 w-3" />
                 </p>
                 <p className="mt-2 text-[13px] font-bold text-slate-900">Semrush</p>

@@ -95,7 +95,7 @@ function ToolListing() {
         <Reveal>
           <div className="card relative overflow-hidden p-8 sm:p-10">
             <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-20 right-1/3 h-56 w-56 rounded-full bg-indigo-100/60 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 right-1/3 h-56 w-56 rounded-full bg-blue-100/60 blur-3xl" />
 
             <div className="relative">
               <h1 className="text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px] xl:text-[60px]">
@@ -116,7 +116,7 @@ function ToolListing() {
     value={query}
     onChange={(e) => setQuery(e.target.value)}
     placeholder="Search tools..."
-    className="h-[52px] w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-5 text-[15px] shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100"
+    className="h-[52px] w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-5 text-[15px] shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-100"
   />
                 </div>
               </div>
@@ -138,9 +138,9 @@ function ToolListing() {
           <div className="card p-5">
             <div className="flex items-center justify-between">
               <p className="flex items-center gap-2 text-[14px] font-extrabold text-slate-900">
-                <SlidersHorizontal className="h-4 w-4 text-indigo-500" /> Filters
+                <SlidersHorizontal className="h-4 w-4 text-blue-500" /> Filters
               </p>
-              {anyFilters && <button onClick={clearAll} className="text-[12px] font-bold text-indigo-600 hover:text-violet-600">
+              {anyFilters && <button onClick={clearAll} className="text-[12px] font-bold text-blue-600 hover:text-blue-500">
                   Clear All
                 </button>}
             </div>
@@ -164,7 +164,7 @@ function ToolListing() {
     type="checkbox"
     checked={selectedCategories.has(lbl)}
     onChange={() => toggleCategory(lbl)}
-    className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-300"
+    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-300"
   />
                       {lbl}
                     </label>)}
@@ -182,7 +182,7 @@ function ToolListing() {
     type="checkbox"
     checked={selectedPricing.has(lbl)}
     onChange={() => togglePricing(lbl)}
-    className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-300"
+    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-300"
   />
                       {lbl}
                     </label>)}
@@ -195,7 +195,7 @@ function ToolListing() {
               <div>
                 <p className="font-heading mb-3 text-[12.5px] font-extrabold text-slate-900">Free Trial</p>
                 <label className="flex cursor-pointer items-center gap-2.5 text-[13px] text-slate-600 hover:text-slate-900">
-                  <input type="checkbox" className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-300" />
+                  <input type="checkbox" className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-300" />
                   Available
                 </label>
               </div>
@@ -220,7 +220,7 @@ function ToolListing() {
               <select
     value={sort}
     onChange={(e) => setSort(e.target.value)}
-    className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-[13px] font-semibold text-slate-700 outline-none focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100"
+    className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-[13px] font-semibold text-slate-700 outline-none focus:border-blue-300 focus:ring-4 focus:ring-blue-100"
   >
                 {SORT_OPTIONS.map((o) => <option key={o}>{o}</option>)}
               </select>
@@ -244,7 +244,7 @@ function ToolListing() {
     }
                     <div className="flex items-start justify-between gap-3">
                       <LogoBadge brand={getBrand(t.brandKey)} size={48} />
-                      <span className="shrink-0 rounded-full bg-indigo-50 px-2.5 py-0.5 text-[11px] font-extrabold text-indigo-600">
+                      <span className="shrink-0 rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-extrabold text-blue-600">
                         {category}
                       </span>
                     </div>
@@ -282,7 +282,7 @@ function ToolListing() {
                           <p className="text-[10px] font-extrabold tracking-widest text-slate-400">REACH</p>
                           <p className="text-[13px] font-bold text-slate-900">{t.userCount}</p>
                         </div>
-                        <span className="flex items-center gap-1 text-[13px] font-bold text-indigo-600 transition-all group-hover:gap-2">
+                        <span className="flex items-center gap-1 text-[13px] font-bold text-blue-600 transition-all group-hover:gap-2">
                           View Details <ChevronRight className="h-3.5 w-3.5" />
                         </span>
                       </div>
@@ -325,7 +325,7 @@ function ToolListing() {
       setQuery(cat.replace(/ tools| generators| schedulers| platforms$/i, ""));
       setShowFilters(false);
     }}
-    className="cursor-pointer rounded-full border border-indigo-200 bg-indigo-50/60 px-4 py-1.5 text-[12.5px] font-semibold text-indigo-700 transition-all hover:border-indigo-400 hover:bg-indigo-100 hover:text-indigo-800"
+    className="cursor-pointer rounded-full border border-blue-200 bg-blue-50/60 px-4 py-1.5 text-[12.5px] font-semibold text-blue-700 transition-all hover:border-blue-400 hover:bg-blue-100 hover:text-blue-800"
   >
                     {cat}
                   </span>)}

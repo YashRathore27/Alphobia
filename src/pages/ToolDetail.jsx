@@ -35,7 +35,7 @@ function HeroSection({ tool }) {
           {tool.description}
         </p>
         <div className="flex flex-wrap gap-2">
-          {tool.tags.map((t) => <span key={t} className="rounded-full border border-[#5B4CF8]/20 bg-[#5B4CF8]/5 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wide text-[#5B4CF8]">
+          {tool.tags.map((t) => <span key={t} className="rounded-full border border-[#2563EB]/20 bg-[#2563EB]/5 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wide text-[#2563EB]">
               {t}
             </span>)}
         </div>
@@ -50,11 +50,11 @@ function HeroSection({ tool }) {
           <p className="mt-1 text-[36px] font-extrabold text-[#111111] leading-none">
             {pricing?.value ?? "$0"}
           </p>
-          {tool.plans.find((p) => p.popular) && <span className="mt-2 inline-block rounded-full bg-[#5B4CF8]/10 px-3 py-0.5 text-[11px] font-bold text-[#5B4CF8]">
+          {tool.plans.find((p) => p.popular) && <span className="mt-2 inline-block rounded-full bg-[#2563EB]/10 px-3 py-0.5 text-[11px] font-bold text-[#2563EB]">
               15% Annual
             </span>}
         </div>
-        <button className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5B4CF8] to-[#4736F2] text-[14px] font-bold text-white shadow-lg shadow-[#5B4CF8]/30 transition-all hover:shadow-xl hover:shadow-[#5B4CF8]/40">
+        <button className="flex h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] text-[14px] font-bold text-white shadow-lg shadow-[#2563EB]/30 transition-all hover:shadow-xl hover:shadow-[#2563EB]/40">
           Visit Official Website <ExternalLink className="h-4 w-4" />
         </button>
         <p className="text-center text-[12px] text-[#666666]">
@@ -133,7 +133,7 @@ function InformationSection({ tool }) {
           </div>
           <button
     onClick={() => navigate("tools")}
-    className="mt-3 w-full text-center text-[13px] font-semibold text-[#5B4CF8] hover:text-[#4736F2]"
+    className="mt-3 w-full text-center text-[13px] font-semibold text-[#2563EB] hover:text-[#1D4ED8]"
   >
             Compare All Tools →
           </button>
@@ -142,7 +142,7 @@ function InformationSection({ tool }) {
         {
     /* Editor's Choice */
   }
-        <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#6A5AF9] to-[#4C3DF2] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+        <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
           <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/10 blur-2xl" />
           <div className="relative z-10">
             <p className="text-[11px] font-bold uppercase tracking-widest text-white/70">Editor's Choice 2024</p>
@@ -222,7 +222,7 @@ function PlanComparisonSection({ plans }) {
               <th className="p-5 text-left text-[13px] font-bold uppercase tracking-wider text-[#666666]">Feature</th>
               {plans.map((p) => <th key={p.name} className="p-5 text-center text-[14px] font-bold text-[#111111]">
                   {p.name}
-                  {p.popular && <span className="ml-2 rounded-full bg-[#5B4CF8]/10 px-2 py-0.5 text-[10px] font-bold text-[#5B4CF8]">Popular</span>}
+                  {p.popular && <span className="ml-2 rounded-full bg-[#2563EB]/10 px-2 py-0.5 text-[10px] font-bold text-[#2563EB]">Popular</span>}
                 </th>)}
             </tr>
           </thead>
@@ -247,7 +247,7 @@ function AffiliateSection() {
     /* LEFT — Calculator */
   }
         <div>
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5B4CF8]/10 text-[#5B4CF8]">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2563EB]/10 text-[#2563EB]">
             <Calculator className="h-5 w-5" />
           </span>
           <h3 className="mt-4 text-[24px] font-bold text-[#111111]">Affiliate Program</h3>
@@ -255,7 +255,7 @@ function AffiliateSection() {
           <div className="mt-6">
             <div className="flex items-center justify-between text-[14px]">
               <span className="font-semibold text-[#111111]">Monthly Referrals</span>
-              <span className="font-bold text-[#5B4CF8]">{referrals}</span>
+              <span className="font-bold text-[#2563EB]">{referrals}</span>
             </div>
             <input
     type="range"
@@ -263,7 +263,7 @@ function AffiliateSection() {
     max={100}
     value={referrals}
     onChange={(e) => setReferrals(Number(e.target.value))}
-    className="mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#ECECF5] accent-[#5B4CF8] [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#5B4CF8] [&::-webkit-slider-thumb]:shadow-md"
+    className="mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#ECECF5] accent-[#2563EB] [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#2563EB] [&::-webkit-slider-thumb]:shadow-md"
   />
             <div className="mt-1 flex justify-between text-[12px] text-[#666666]">
               <span>1</span><span>10</span><span>100</span>
@@ -271,7 +271,7 @@ function AffiliateSection() {
           </div>
           <div className="mt-4 rounded-[16px] bg-white p-5 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
             <p className="text-[13px] font-semibold text-[#666666]">Estimated Monthly Payout</p>
-            <p className="mt-1 text-[36px] font-extrabold text-[#5B4CF8]">${monthly.toFixed(0)}</p>
+            <p className="mt-1 text-[36px] font-extrabold text-[#2563EB]">${monthly.toFixed(0)}</p>
           </div>
         </div>
 
@@ -286,7 +286,7 @@ function AffiliateSection() {
     { icon: Percent, text: "120-day cookie duration for maximum conversions" },
     { icon: DollarSign, text: "Dedicated partner support & real-time dashboard" }
   ].map((item) => <li key={item.text} className="flex items-start gap-3 text-[14px] text-[#666666]">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#5B4CF8]/10 text-[#5B4CF8]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#2563EB]/10 text-[#2563EB]">
                   <item.icon className="h-4 w-4" />
                 </span>
                 {item.text}
@@ -304,7 +304,7 @@ function ToolDetail({ id }) {
   if (!tool) {
     return <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 p-8 text-center">
         <p className="text-[20px] font-bold text-[#111111]">Tool not found</p>
-        <button onClick={() => navigate("home")} className="rounded-full bg-[#5B4CF8] px-6 py-3 text-sm font-bold text-white">
+        <button onClick={() => navigate("home")} className="rounded-full bg-[#2563EB] px-6 py-3 text-sm font-bold text-white">
           Back to Home
         </button>
       </div>;

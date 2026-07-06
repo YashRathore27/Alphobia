@@ -80,7 +80,7 @@ function AllCategories() {
                   </span>
                   <h3 className="mt-3 text-[16px] font-bold text-slate-900">{c.title}</h3>
                   <p className="mt-1 text-[13px] text-slate-400">{c.count}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-bold text-indigo-600">
+                  <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-bold text-blue-600">
                     Explore
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
@@ -132,7 +132,7 @@ function CategoryListing({ id }) {
     value={query}
     onChange={(e) => setQuery(e.target.value)}
     placeholder={cat.searchPlaceholder}
-    className="h-14 w-full rounded-xl border border-[#E5E7EB] bg-white pl-12 pr-5 text-[15px] text-slate-900 outline-none shadow-sm transition-all placeholder:text-[#6B7280] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+    className="h-14 w-full rounded-xl border border-[#E5E7EB] bg-white pl-12 pr-5 text-[15px] text-slate-900 outline-none shadow-sm transition-all placeholder:text-[#6B7280] focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
   />
           </div>
           <select
@@ -156,9 +156,9 @@ function CategoryListing({ id }) {
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
             <div className="mb-2 flex items-center justify-between">
               <p className="font-heading flex items-center gap-2 text-[15px] font-extrabold text-[#111827]">
-                <SlidersHorizontal className="h-4 w-4 text-indigo-500" /> Filters
+                <SlidersHorizontal className="h-4 w-4 text-blue-500" /> Filters
               </p>
-              <button className="text-[13px] font-semibold text-indigo-600 hover:text-indigo-800">
+              <button className="text-[13px] font-semibold text-blue-600 hover:text-blue-800">
                 Clear All
               </button>
             </div>
@@ -192,7 +192,7 @@ function CategoryListing({ id }) {
     title="Business Size"
     options={[{ label: "Freelancer" }, { label: "Small Business" }, { label: "Enterprise" }]}
   />
-              <button className="mt-4 flex items-center gap-1 text-[13px] font-semibold text-indigo-600 hover:text-indigo-800">
+              <button className="mt-4 flex items-center gap-1 text-[13px] font-semibold text-blue-600 hover:text-blue-800">
                 More Filters <ChevronDown className="h-3.5 w-3.5" />
               </button>
             </div>
@@ -228,7 +228,7 @@ function CategoryListing({ id }) {
                 {cat.trending.map((t) => <span
     key={t}
     onClick={() => setQuery(t)}
-    className="cursor-pointer rounded-full border border-[#E5E7EB] bg-white px-4 py-1.5 text-[13px] font-medium text-[#6B7280] transition-all hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600"
+    className="cursor-pointer rounded-full border border-[#E5E7EB] bg-white px-4 py-1.5 text-[13px] font-medium text-[#6B7280] transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
   >
                     {t}
                   </span>)}

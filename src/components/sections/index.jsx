@@ -145,7 +145,7 @@ export function NewsletterCTA() {
     <section className="py-24">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-indigo-600 p-10 text-white shadow-2xl shadow-primary/30 sm:p-16">
+          <div className="relative overflow-hidden rounded-[2rem] bg-blue-600 p-10 text-white shadow-2xl shadow-primary/30 sm:p-16">
             <div className="relative max-w-xl">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
                 <Sparkles size={13} /> Weekly deal brief
