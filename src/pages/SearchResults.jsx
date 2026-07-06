@@ -18,8 +18,8 @@ const TABS = [
 ];
 const RESULTS = [
   { brand: BRANDS.semrush, name: "Semrush", desc: "All-in-one SEO & marketing toolkit", rating: 4.8, meta: "From $119.95/mo", badge: "30% OFF", id: "semrush" },
-  { brand: BRANDS.ahrefs, name: "Ahrefs", desc: "Backlink checker & SEO tools", rating: 4.7, meta: "From $99/mo", badge: "Starts from $99", badgeClass: "bg-indigo-50 text-indigo-600 ring-1 ring-indigo-200", id: "ahrefs" },
-  { brand: EXTRA_BRANDS.moz, name: "Moz Pro", desc: "SEO software suite for rankings & visibility", rating: 4.6, meta: "From $99/mo", badge: "30 Days Free Trial", badgeClass: "bg-violet-50 text-violet-600 ring-1 ring-violet-200", id: "moz" },
+  { brand: BRANDS.ahrefs, name: "Ahrefs", desc: "Backlink checker & SEO tools", rating: 4.7, meta: "From $99/mo", badge: "Starts from $99", badgeClass: "bg-blue-50 text-blue-600 ring-1 ring-blue-200", id: "ahrefs" },
+  { brand: EXTRA_BRANDS.moz, name: "Moz Pro", desc: "SEO software suite for rankings & visibility", rating: 4.6, meta: "From $99/mo", badge: "30 Days Free Trial", badgeClass: "bg-blue-50 text-blue-600 ring-1 ring-blue-200", id: "moz" },
   { brand: EXTRA_BRANDS.ubersuggest, name: "Ubersuggest", desc: "Keyword research & SEO audit tool", rating: 4.5, meta: "From $29/mo", badge: "Free Plan Available", badgeClass: "bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200", id: "ubersuggest" },
   { brand: BRANDS.canva, name: "Canva Pro", desc: "Design platform for marketing assets", rating: 4.8, meta: "$12.99/mo", badge: "50% OFF", id: "canva" }
 ];
@@ -43,7 +43,7 @@ function SearchResults() {
     value={query}
     onChange={(e) => setQuery(e.target.value)}
     placeholder="Search SEO tools..."
-    className="h-14 w-full rounded-2xl border border-[#E5E7EB] bg-white pl-14 pr-14 text-[18px] text-[#111827] shadow-sm outline-none transition-all placeholder:text-[#6B7280] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+    className="h-14 w-full rounded-2xl border border-[#E5E7EB] bg-white pl-14 pr-14 text-[18px] text-[#111827] shadow-sm outline-none transition-all placeholder:text-[#6B7280] focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
   />
             {query && <button
     onClick={() => setQuery("")}
@@ -55,7 +55,7 @@ function SearchResults() {
           </div>
           <p className="mt-4 text-center text-[15px] text-[#6B7280]">
             <span className="font-semibold text-[#111827]">{filtered.length} results</span> found for "
-            <span className="font-semibold text-indigo-600">{query}</span>"
+            <span className="font-semibold text-blue-600">{query}</span>"
           </p>
         </Reveal>
 
@@ -67,10 +67,10 @@ function SearchResults() {
             {TABS.map((t) => <button
     key={t.label}
     onClick={() => setTab(t.label)}
-    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${tab === t.label ? "text-indigo-600" : "text-[#6B7280] hover:text-[#111827]"}`}
+    className={`relative shrink-0 px-5 py-4 text-[14px] font-semibold transition-colors ${tab === t.label ? "text-blue-600" : "text-[#6B7280] hover:text-[#111827]"}`}
   >
                 {t.label} <span className="text-[13px] font-normal text-[#6B7280]">({t.count})</span>
-                {tab === t.label && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-indigo-600" />}
+                {tab === t.label && <span className="absolute inset-x-3 -bottom-px h-[3px] rounded-full bg-blue-600" />}
               </button>)}
           </div>
         </Reveal>
@@ -86,7 +86,7 @@ function SearchResults() {
             <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
               <div className="mb-2 flex items-center justify-between">
                 <p className="text-[15px] font-bold text-[#111827]">Filters</p>
-                <button className="text-[13px] font-semibold text-indigo-600 hover:text-indigo-800">
+                <button className="text-[13px] font-semibold text-blue-600 hover:text-blue-800">
                   Clear All
                 </button>
               </div>
@@ -106,7 +106,7 @@ function SearchResults() {
               <FilterGroup title="Free Trial" options={[{ label: "Yes" }]} />
               <div className="border-b border-[#E5E7EB] py-[14px]">
                 <p className="font-heading mb-4 text-[13px] font-extrabold text-[#111827]">Sort By</p>
-                <select className="h-11 w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-[13px] font-semibold text-[#111827] outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+                <select className="h-11 w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-[13px] font-semibold text-[#111827] outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
                   {["Most Relevant", "Most Popular", "Highest Rated", "Newest"].map((o) => <option key={o}>{o}</option>)}
                 </select>
               </div>
@@ -145,12 +145,12 @@ function SearchResults() {
                     <p className="mt-2 text-[15px] leading-relaxed text-[#6B7280]">
                       Request a tool and we will review it for you. We add new tools and deals every single week.
                     </p>
-                    <button className="mt-5 flex h-[48px] items-center justify-center rounded-xl bg-indigo-600 px-8 text-[15px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-700">
+                    <button className="mt-5 flex h-[48px] items-center justify-center rounded-xl bg-blue-600 px-8 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:bg-blue-700">
                       Request Tool
                     </button>
                   </div>
-                  <div className="flex h-36 w-36 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-50 via-white to-violet-50">
-                    <Search className="h-14 w-14 text-indigo-300" />
+                  <div className="flex h-36 w-36 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-50 via-white to-blue-50">
+                    <Search className="h-14 w-14 text-blue-300" />
                   </div>
                 </div>
               </div>

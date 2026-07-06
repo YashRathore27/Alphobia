@@ -26,11 +26,11 @@ import { cn } from "../utils/cn";
 function SectionHead({ eyebrow, title, subtitle, to, cta = "View all" }) {
   return (
     <Reveal className="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-5 w-full">
-      <div className="w-[90%] flex-grow">
+      <div className="flex-grow w-full">
         {eyebrow && <p className="mb-2.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">{eyebrow}</p>}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 w-full">
           <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-[28px] shrink-0">{title}</h2>
-          <div className="h-[1.5px] flex-grow bg-slate-200 dark:bg-white/20 hidden sm:block" />
+          <div className="h-[1.5px] flex-grow hidden sm:block" style={{ backgroundColor: "#B8ADAD" }} />
         </div>
         {subtitle && <p className="mt-2.5 text-sm leading-relaxed text-body">{subtitle}</p>}
       </div>
@@ -322,7 +322,7 @@ function AffiliatePrograms() {
                   <p className="flex items-center justify-between"><span className="text-faint">Cookie</span><span className="font-semibold text-ink">{p.cookie}</span></p>
                 </div>
                 <button onClick={() => toast(`Application started for ${p.name}`)}
-                  className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-line py-2.5 text-[13px] font-bold text-ink transition-all hover:border-blue-500/40 hover:bg-blue-500/5 hover:text-blue-500">
+                  className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-line py-2.5 text-[13px] font-bold text-ink transition-all hover:border-blue-600/40 hover:bg-blue-600/5 hover:text-blue-600">
                   Join program <ArrowUpRight size={13} />
                 </button>
               </article>
@@ -436,7 +436,7 @@ function ComparisonBanner() {
     <section className="py-24">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-indigo-500 to-blue-400 p-10 text-white shadow-2xl shadow-primary/25 sm:p-14">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 p-10 text-white shadow-2xl shadow-primary/25 sm:p-14">
             <div className="grid items-center gap-10 lg:grid-cols-2">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest"><Trophy size={13} /> Comparison engine</span>
@@ -453,7 +453,7 @@ function ComparisonBanner() {
                     <p className="mt-1 text-xs text-white/60">{formatPrice(p.price)} · ★ {p.rating}</p>
                   </motion.div>
                 ))}
-                <span className="absolute left-1/2 top-1/2 z-10 flex h-13 w-13 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-indigo-500 text-sm font-bold text-white shadow-xl ring-4 ring-white/20">VS</span>
+                <span className="absolute left-1/2 top-1/2 z-10 flex h-13 w-13 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white shadow-xl ring-4 ring-white/20">VS</span>
               </div>
             </div>
           </div>

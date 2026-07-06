@@ -40,7 +40,7 @@ function ReviewsNews() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {REVIEWS.map((r, i) => <Reveal key={r.title} delay={i * 0.08}>
                 <button onClick={() => navigate("review", r.id)} className="card card-hover group block h-full w-full p-4 text-left">
-                  <div className="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-indigo-50 via-white to-violet-50">
+                  <div className="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 via-white to-blue-50">
                     <span className="transition-transform duration-500 group-hover:scale-110">
                       <LogoBadge brand={BRANDS[r.brand]} size={52} />
                     </span>
@@ -48,7 +48,7 @@ function ReviewsNews() {
                   <h3 className="text-[14px] font-bold text-slate-900">{r.title}</h3>
                   <Rating value={r.rating} className="mt-1.5" />
                   <p className="mt-2 text-[13px] leading-relaxed text-slate-500">{r.desc}</p>
-                  <span className="mt-2 inline-flex items-center gap-1 text-[13px] font-bold text-indigo-600">
+                  <span className="mt-2 inline-flex items-center gap-1 text-[13px] font-bold text-blue-600">
                     Read Review
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
@@ -74,13 +74,13 @@ function ReviewsNews() {
               </div>
               <div className="flex flex-1 flex-col divide-y divide-slate-100">
                 {NEWS.map((n) => <button key={n.title} onClick={() => navigate("news", n.id)} className="group flex-1 py-3 first:pt-0 last:pb-0 text-left">
-                    <p className="text-[13px] font-semibold leading-snug text-slate-800 transition-colors group-hover:text-indigo-600">
+                    <p className="text-[13px] font-semibold leading-snug text-slate-800 transition-colors group-hover:text-blue-600">
                       {n.title}
                     </p>
                     <p className="mt-1.5 flex items-center gap-1.5 text-[11px] font-medium text-slate-400">
                       <CalendarDays className="h-3 w-3" />
                       {n.date}
-                      <span className="ml-auto inline-flex items-center gap-0.5 font-bold text-indigo-500 opacity-0 transition-opacity group-hover:opacity-100">
+                      <span className="ml-auto inline-flex items-center gap-0.5 font-bold text-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
                         Read More <ArrowRight className="h-3 w-3" />
                       </span>
                     </p>

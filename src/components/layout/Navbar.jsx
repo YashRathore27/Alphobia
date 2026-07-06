@@ -22,8 +22,8 @@ const links = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label="Alphobia home">
-      <span className="text-lg font-extrabold tracking-tight text-ink dark:text-white">
-        Alphobia<span className="text-primary">.</span>
+      <span className="text-lg font-extrabold tracking-tight text-logo-gradient">
+        Alphobia.
       </span>
     </Link>
   );

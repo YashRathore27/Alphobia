@@ -18,7 +18,7 @@ const OFFERS = [
     sponsored: true,
     desc: "Start advertising on Facebook & Instagram and grow your brand.",
     badge: "20% OFF",
-    badgeClass: "border-indigo-200 bg-indigo-50 text-indigo-600"
+    badgeClass: "border-blue-200 bg-blue-50 text-blue-600"
   },
   {
     brand: "semrush",
@@ -36,7 +36,7 @@ const OFFERS = [
     sponsored: false,
     desc: "Design anything with Canva Pro and team collaboration.",
     badge: "Free Trial",
-    badgeClass: "border-violet-200 bg-violet-50 text-violet-600"
+    badgeClass: "border-blue-200 bg-blue-50 text-blue-600"
   },
   {
     brand: "clickfunnels",
@@ -71,7 +71,7 @@ function TrendingOffers() {
                 </span>
                 <button
     onClick={() => navigate("deal", o.brand)}
-    className="btn-ripple gradient-bg group mt-2 flex w-full items-center justify-center gap-1.5 rounded-xl py-2.5 text-[13px] font-bold text-white shadow-md shadow-indigo-500/25 transition-shadow hover:shadow-indigo-500/45"
+    className="btn-ripple gradient-bg group mt-2 flex w-full items-center justify-center gap-1.5 rounded-xl py-2.5 text-[13px] font-bold text-white shadow-md shadow-blue-500/25 transition-shadow hover:shadow-blue-500/45"
   >
                   View Offer
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -110,7 +110,7 @@ function AffiliatePrograms() {
               </p>
                 <button
     onClick={() => navigate("affiliate", p.brand)}
-    className="btn-ripple group mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border border-indigo-200 py-2.5 text-[13px] font-bold text-indigo-600 transition-all hover:border-transparent hover:bg-indigo-600 hover:text-white"
+    className="btn-ripple group mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border border-blue-200 py-2.5 text-[13px] font-bold text-blue-600 transition-all hover:border-transparent hover:bg-blue-600 hover:text-white"
   >
                   Join Now
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

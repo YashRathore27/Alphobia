@@ -21,8 +21,8 @@ const SAVED = [
 ];
 const BADGES = [
   { icon: Trophy, label: "Top Reviewer", color: "bg-amber-50 text-amber-500" },
-  { icon: Star, label: "Early Adopter", color: "bg-indigo-50 text-indigo-600" },
-  { icon: Zap, label: "Deal Hunter", color: "bg-violet-50 text-violet-600" },
+  { icon: Star, label: "Early Adopter", color: "bg-blue-50 text-blue-600" },
+  { icon: Zap, label: "Deal Hunter", color: "bg-blue-50 text-blue-600" },
   { icon: Award, label: "Trusted Voice", color: "bg-emerald-50 text-emerald-600" }
 ];
 function Profile() {
@@ -39,7 +39,7 @@ function Profile() {
   }
             <div className="gradient-bg relative h-40 sm:h-52">
               <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
-              <div className="pointer-events-none absolute bottom-0 left-1/3 h-32 w-64 rounded-full bg-violet-400/30 blur-3xl" />
+              <div className="pointer-events-none absolute bottom-0 left-1/3 h-32 w-64 rounded-full bg-blue-400/30 blur-3xl" />
               <svg className="absolute inset-0 h-full w-full opacity-20" viewBox="0 0 400 100" preserveAspectRatio="none">
                 <path d="M0 80 L80 30 L160 60 L240 15 L320 45 L400 5 L400 100 L0 100 Z" fill="white" />
               </svg>
@@ -58,7 +58,7 @@ function Profile() {
                   <h1 className="text-[24px] font-extrabold tracking-tight text-slate-900 sm:text-[28px]">
                     John Doe
                   </h1>
-                  <p className="text-[13.5px] font-semibold text-indigo-600">
+                  <p className="text-[13.5px] font-semibold text-blue-600">
                     Digital Marketer & Content Creator
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-4 text-[12.5px] text-slate-400">
@@ -73,7 +73,7 @@ function Profile() {
                     </span>
                   </div>
                 </div>
-                <button className="btn-ripple flex h-11 items-center gap-2 self-start rounded-xl border border-indigo-200 px-5 text-[13px] font-bold text-indigo-600 transition-all hover:bg-indigo-50 sm:self-end">
+                <button className="btn-ripple flex h-11 items-center gap-2 self-start rounded-xl border border-blue-200 px-5 text-[13px] font-bold text-blue-600 transition-all hover:bg-blue-50 sm:self-end">
                   <PencilLine className="h-4 w-4" /> Edit Profile
                 </button>
               </div>
@@ -118,7 +118,7 @@ function Profile() {
                   {REVIEWS.map((r) => <button
     key={r.title}
     onClick={() => navigate("review", r.id)}
-    className="flex w-full flex-col gap-4 rounded-2xl border border-slate-100 p-5 text-left transition-all hover:border-indigo-200 hover:bg-indigo-50/40 sm:flex-row sm:items-center"
+    className="flex w-full flex-col gap-4 rounded-2xl border border-slate-100 p-5 text-left transition-all hover:border-blue-200 hover:bg-blue-50/40 sm:flex-row sm:items-center"
   >
                       <LogoBadge brand={r.brand} size={46} />
                       <div className="min-w-0 flex-1">
@@ -132,7 +132,7 @@ function Profile() {
                     </button>)}
                   <button
     onClick={() => navigate("review", REVIEWS[0]?.id)}
-    className="mx-auto block text-[13px] font-bold text-indigo-600 hover:text-violet-600"
+    className="mx-auto block text-[13px] font-bold text-blue-600 hover:text-blue-500"
   >
                     View All Reviews →
                   </button>
@@ -146,7 +146,7 @@ function Profile() {
   >
                       <LogoBadge brand={s.brand} size={46} />
                       <p className="text-[13px] font-bold text-slate-900">{s.name}</p>
-                      <span className="rounded-xl bg-indigo-50 px-4 py-1.5 text-[11.5px] font-bold text-indigo-600">
+                      <span className="rounded-xl bg-blue-50 px-4 py-1.5 text-[11.5px] font-bold text-blue-600">
                         View Deal →
                       </span>
                     </button>)}
@@ -166,7 +166,7 @@ function Profile() {
                   </p>
                   <button
     onClick={() => navigate("home")}
-    className="btn-ripple gradient-bg mt-4 rounded-xl px-6 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-indigo-500/30"
+    className="btn-ripple gradient-bg mt-4 rounded-xl px-6 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-blue-500/30"
   >
                     Explore Alphobia
                   </button>

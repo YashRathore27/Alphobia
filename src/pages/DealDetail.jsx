@@ -41,9 +41,9 @@ function MiniDashboard() {
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
       </div>
       <div className="grid grid-cols-3 gap-3 p-5">
-        {["Traffic", "Keywords", "Backlinks"].map((k, i) => <div key={k} className="rounded-xl bg-indigo-50/70 p-3">
+        {["Traffic", "Keywords", "Backlinks"].map((k, i) => <div key={k} className="rounded-xl bg-blue-50/70 p-3">
             <p className="text-[10px] font-semibold text-slate-400">{k}</p>
-            <p className="text-sm font-extrabold text-indigo-700">
+            <p className="text-sm font-extrabold text-blue-700">
               {["128K", "4,560", "89.2K"][i]}
             </p>
           </div>)}
@@ -58,8 +58,8 @@ function MiniDashboard() {
   />
             <defs>
               <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stopColor="#4f46e5" />
-                <stop offset="1" stopColor="#7c3aed" />
+                <stop offset="0" stopColor="#2563EB" />
+                <stop offset="1" stopColor="#3B82F6" />
               </linearGradient>
             </defs>
           </svg>
@@ -119,28 +119,28 @@ function DealDetail({ id }) {
                     <span className="flex items-center gap-1.5 rounded-full bg-rose-50 px-3 py-1 text-[12px] font-bold text-rose-500 ring-1 ring-rose-200">
                       <Clock className="h-3.5 w-3.5" /> {deal.expiresLabel}
                     </span>
-                    <span className="flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1 text-[12px] font-bold text-indigo-600 ring-1 ring-indigo-200">
+                    <span className="flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-[12px] font-bold text-blue-600 ring-1 ring-blue-200">
                       <BadgeCheck className="h-3.5 w-3.5" /> Official Partner
                     </span>
                   </div>
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <button className="btn-ripple gradient-bg group flex h-12 items-center gap-2 rounded-xl px-7 text-[14px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50">
-                  Get Deal
+                <button className="btn-ripple gradient-bg group flex h-12 items-center gap-2 rounded-xl px-7 text-[14px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:shadow-blue-500/50">
+                   Get Deal
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </button>
-                <button className="btn-ripple flex h-12 items-center gap-2 rounded-xl border border-indigo-200 px-7 text-[14px] font-bold text-indigo-600 transition-all hover:bg-indigo-50">
-                  Visit Website
+                <button className="btn-ripple flex h-12 items-center gap-2 rounded-xl border border-blue-200 px-7 text-[14px] font-bold text-blue-600 transition-all hover:bg-blue-50">
+                   Visit Website
                 </button>
                 <button
     onClick={() => setSaved(!saved)}
-    className={`flex h-12 items-center gap-2 rounded-xl border px-5 text-[13px] font-bold transition-all ${saved ? "border-indigo-300 bg-indigo-50 text-indigo-600" : "border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600"}`}
+    className={`flex h-12 items-center gap-2 rounded-xl border px-5 text-[13px] font-bold transition-all ${saved ? "border-blue-300 bg-blue-50 text-blue-600" : "border-slate-200 text-slate-600 hover:border-blue-300 hover:text-blue-600"}`}
   >
-                  <Bookmark className={`h-4 w-4 ${saved ? "fill-indigo-500 text-indigo-500" : ""}`} />
+                  <Bookmark className={`h-4 w-4 ${saved ? "fill-blue-500 text-blue-500" : ""}`} />
                   {saved ? "Saved" : "Save"}
                 </button>
-                <button className="flex h-12 items-center gap-2 rounded-xl border border-slate-200 px-5 text-[13px] font-bold text-slate-600 transition-all hover:border-indigo-300 hover:text-indigo-600">
+                <button className="flex h-12 items-center gap-2 rounded-xl border border-slate-200 px-5 text-[13px] font-bold text-slate-600 transition-all hover:border-blue-300 hover:text-blue-600">
                   <Share2 className="h-4 w-4" /> Share
                 </button>
               </div>
@@ -153,7 +153,7 @@ function DealDetail({ id }) {
           <Reveal>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6">
               {trustItems.map((t) => <div key={t.label} className="card flex flex-col items-center gap-2 p-4 text-center">
-                  <t.icon className="h-5 w-5 text-indigo-500" />
+                  <t.icon className="h-5 w-5 text-blue-500" />
                   <span className="text-[11.5px] font-bold text-slate-700">{t.label}</span>
                 </div>)}
             </div>
@@ -221,7 +221,7 @@ function DealDetail({ id }) {
                     </span>
                     <button
     onClick={() => navigate("deal", s.brandKey)}
-    className="btn-ripple gradient-bg mt-3 w-full rounded-xl py-2 text-[12px] font-bold text-white shadow-md shadow-indigo-500/25"
+    className="btn-ripple gradient-bg mt-3 w-full rounded-xl py-2 text-[12px] font-bold text-white shadow-md shadow-blue-500/25"
   >
                       View Deal
                     </button>
@@ -246,7 +246,7 @@ function DealDetail({ id }) {
                 Offer Ends In
               </p>
               <Countdown seconds={deal.countdownSeconds} />
-              <button className="btn-ripple gradient-bg group mt-4 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-[14px] font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50">
+              <button className="btn-ripple gradient-bg group mt-4 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-[14px] font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:shadow-blue-500/50">
                 Visit Website
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
@@ -269,7 +269,7 @@ function DealDetail({ id }) {
               </div>
               <button
     onClick={() => navigate("compare")}
-    className="mt-3 w-full rounded-xl border border-indigo-200 py-2.5 text-[12.5px] font-bold text-indigo-600 transition-all hover:bg-indigo-50"
+    className="mt-3 w-full rounded-xl border border-blue-200 py-2.5 text-[12.5px] font-bold text-blue-600 transition-all hover:bg-blue-50"
   >
                 Compare with Alternatives
               </button>

@@ -42,14 +42,14 @@ function DealCard({ deal }) {
         Expires in
       </p>
       <div className="mt-2 grid grid-cols-3 gap-2">
-        {units.map((u) => <div key={u.l} className="rounded-xl bg-indigo-50/80 py-2 text-center">
-            <p className="text-[17px] font-extrabold tabular-nums text-indigo-700">{u.v}</p>
-            <p className="text-[10px] font-semibold text-indigo-400">{u.l}</p>
+        {units.map((u) => <div key={u.l} className="rounded-xl bg-blue-50/80 py-2 text-center">
+            <p className="text-[17px] font-extrabold tabular-nums text-blue-700">{u.v}</p>
+            <p className="text-[10px] font-semibold text-blue-400">{u.l}</p>
           </div>)}
       </div>
       <button
     onClick={() => navigate("deal", deal.brand)}
-    className="btn-ripple group mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border border-indigo-200 bg-indigo-50/60 py-2.5 text-[13px] font-bold text-indigo-600 transition-all hover:border-transparent hover:bg-indigo-600 hover:text-white"
+    className="btn-ripple group mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border border-blue-200 bg-blue-50/60 py-2.5 text-[13px] font-bold text-blue-600 transition-all hover:border-transparent hover:bg-blue-600 hover:text-white"
   >
         View Deal
         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -82,8 +82,8 @@ function ComparePlatforms() {
   />
       <Reveal>
         <div className="card relative overflow-hidden p-6 sm:p-8">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-violet-100/60 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl" />
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-100/60 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-blue-100/60 blur-3xl" />
           <div className="relative flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-6">
             {COMPARE.map((c, i) => <div key={c.name} className="flex flex-col items-center gap-8 lg:flex-row lg:gap-6">
                 {i > 0 && <span className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-[12px] font-extrabold text-slate-400 ring-4 ring-white">
@@ -101,7 +101,7 @@ function ComparePlatforms() {
           <div className="relative mt-6 text-center">
             <button
     onClick={() => navigate("compare")}
-    className="btn-ripple gradient-bg group inline-flex h-12 items-center gap-2 rounded-xl px-8 text-[14px] font-bold text-white shadow-xl shadow-indigo-500/30 transition-all hover:shadow-indigo-500/50"
+    className="btn-ripple gradient-bg group inline-flex h-12 items-center gap-2 rounded-xl px-8 text-[14px] font-bold text-white shadow-xl shadow-blue-500/30 transition-all hover:shadow-blue-500/50"
   >
               Compare Now
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

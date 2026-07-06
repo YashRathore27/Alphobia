@@ -17,7 +17,7 @@ const btnVariants = {
   outline: "border border-line bg-white text-slate-700 hover:border-primary/40 hover:text-primary dark:border-white/10 dark:bg-slate-800/60 dark:text-slate-200",
   ghost: "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white",
   accent: "bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-primary/35",
-  soft: "bg-primary/10 text-primary hover:bg-primary/15 dark:bg-primary/20 dark:text-violet-300",
+  soft: "bg-primary/10 text-primary hover:bg-primary/15 dark:bg-primary/20 dark:text-blue-300",
 };
 const btnSizes = { sm: "h-9 px-4 text-sm", md: "h-11 px-5.5 text-sm", lg: "h-13 px-7 text-base" };
 
@@ -39,7 +39,7 @@ export function Button({ as, to, variant = "primary", size = "md", className, ch
 
 /* -------------------------------- badge -------------------------------- */
 const badgeTones = {
-  blue: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-violet-300",
+  blue: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300",
   cyan: "bg-secondary/10 text-pink-600 dark:bg-secondary/20 dark:text-pink-300",
   green: "bg-success/10 text-emerald-600 dark:bg-success/20 dark:text-emerald-300",
   amber: "bg-warning/10 text-amber-600 dark:bg-warning/20 dark:text-amber-300",
@@ -61,14 +61,17 @@ export function SectionHeading({ eyebrow, title, subtitle, align = "center", cla
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={cn("mb-12", align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl", className)}
+      className={cn("mb-12 w-full", align === "center" ? "mx-auto max-w-2xl text-center" : "w-full", className)}
     >
       {eyebrow && (
-        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary dark:border-primary/30 dark:bg-primary/15 dark:text-violet-300">
+        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary dark:border-primary/30 dark:bg-primary/15 dark:text-blue-300">
           {eyebrow}
         </span>
       )}
-      <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl dark:text-white">{title}</h2>
+      <div className="flex items-center gap-4 w-full">
+        <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl dark:text-white shrink-0">{title}</h2>
+        {align !== "center" && <div className="h-[1.5px] flex-grow hidden sm:block" style={{ backgroundColor: "#B8ADAD" }} />}
+      </div>
       {subtitle && <p className="mt-4 text-base leading-relaxed text-body dark:text-slate-400">{subtitle}</p>}
     </motion.div>
   );

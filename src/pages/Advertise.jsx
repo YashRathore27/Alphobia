@@ -85,7 +85,7 @@ export default function Advertise() {
               <Reveal key={p.name} delay={i * 0.08}>
                 <div className="card-base card-hover flex h-full flex-col p-8">
                   <div className="flex items-start justify-between">
-                    <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-indigo-600 p-3.5 text-white shadow-lg shadow-primary/25"><p.icon size={22} /></span>
+                    <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-blue-600 p-3.5 text-white shadow-lg shadow-primary/25"><p.icon size={22} /></span>
                     <Badge tone="blue">{p.price}</Badge>
                   </div>
                   <h3 className="mt-5 text-xl font-bold text-slate-900 dark:text-white">{p.name}</h3>

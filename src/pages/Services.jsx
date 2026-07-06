@@ -104,7 +104,7 @@ export default function Services() {
       <Container className="pb-24">
         <SectionHeading eyebrow="FAQ" title="Questions, answered honestly" />
         <Accordion items={faqs} className="mx-auto max-w-3xl" />
-        <Reveal className="mx-auto mt-16 max-w-3xl rounded-[2rem] bg-indigo-600 p-10 text-center text-white shadow-2xl shadow-primary/30">
+        <Reveal className="mx-auto mt-16 max-w-3xl rounded-[2rem] bg-blue-600 p-10 text-center text-white shadow-2xl shadow-primary/30">
           <h3 className="text-2xl font-extrabold sm:text-3xl">Ready to see what's leaking in your funnel?</h3>
           <p className="mx-auto mt-3 max-w-md text-white/85">Get a free 10-page marketing audit — delivered in 5 business days, no strings attached.</p>
           <Button to="/contact" variant="secondary" size="lg" className="mt-7 !bg-white !text-primary hover:!bg-slate-100">Get Free Marketing Audit <ArrowRight size={16} /></Button>

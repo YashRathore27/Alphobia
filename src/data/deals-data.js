@@ -531,6 +531,112 @@ const DEALS_DATA = {
     trustIcons: ["BadgeCheck", "ShieldCheck", "Wallet", "Rocket", "Sparkles", "Globe"],
     countdownSeconds: 9 * 3600 + 55 * 60 + 30,
     expiresLabel: "Expires in 2 Days"
+  },
+  googleads: {
+    brandKey: "googleads",
+    name: "Google Ads",
+    rating: 4.8,
+    reviewCount: "12,500 Reviews",
+    badge: "40% Bonus Credit",
+    badgeClass: "bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200",
+    couponCode: "GOOGLE40",
+    description: "Google Ads is the world's largest advertising platform, helping businesses reach customers across Search, Display, YouTube and more. Get 40% bonus credit when you spend $500 on your first campaign.",
+    image: "/images/digital.png",
+    category: "ADS",
+    currentPrice: "$500",
+    originalPrice: "$700",
+    discountPercent: "40% Bonus",
+    inventory: 50,
+    inventoryLabel: "Limited Offer!",
+    checklist: [
+      "Reach 90%+ of internet users worldwide",
+      "Smart bidding & automated campaigns",
+      "Cross-network targeting (Search, Display, YouTube, Gmail)",
+      "Advanced audience & remarketing tools",
+      "Real-time performance analytics"
+    ],
+    pros: [
+      "Massive reach across Google's ecosystem",
+      "Powerful targeting & AI-driven optimization",
+      "Pay only for results (PPC model)",
+      "40% bonus credit on first campaign"
+    ],
+    cons: [
+      "Can get expensive without proper optimization",
+      "Learning curve for advanced features",
+      "Competitive keywords have high CPCs"
+    ],
+    faqs: [
+      { q: "How do I claim the 40% Bonus Credit?", a: "Click Get Deal and you'll be directed to the Google Ads sign-up page. The bonus is auto-applied when you spend $500 within 60 days." },
+      { q: "Is this for new customers only?", a: "Yes, the 40% bonus credit is available for new Google Ads advertisers only." },
+      { q: "How long does the bonus credit last?", a: "The bonus credit must be used within 60 days of account creation." }
+    ],
+    reviews: [
+      { n: "Michael T.", r: 5, t: "Google Ads transformed our business. The bonus credit gave us a great headstart on testing campaigns." },
+      { n: "Sophia L.", r: 4.5, t: "Excellent platform for reaching new customers. The targeting options are incredibly detailed." }
+    ],
+    similar: [
+      { brandKey: "meta", name: "Meta Ads", rating: 4.7, off: "20% OFF" },
+      { brandKey: "semrush", name: "Semrush", rating: 4.8, off: "30% OFF" },
+      { brandKey: "canva", name: "Canva Pro", rating: 4.8, off: "50% OFF" },
+      { brandKey: "clickfunnels", name: "ClickFunnels", rating: 4.7, off: "20% OFF" }
+    ],
+    trustIcons: ["BadgeCheck", "ShieldCheck", "Wallet", "Rocket", "Sparkles", "Globe"],
+    countdownSeconds: 10 * 3600 + 30 * 60 + 0,
+    expiresLabel: "Expires in 5 Days"
+  },
+  meta: {
+    brandKey: "meta",
+    name: "Meta Ads",
+    rating: 4.7,
+    reviewCount: "10,200 Reviews",
+    badge: "20% OFF",
+    badgeClass: "bg-blue-50 text-blue-600 ring-1 ring-blue-200",
+    couponCode: "META20",
+    description: "Meta Ads (Facebook & Instagram) lets you reach over 3.9 billion people monthly. Run targeted campaigns across Facebook, Instagram, Messenger and Audience Network with 20% off your first ad spend.",
+    image: "/images/business-communication-icon.png",
+    category: "ADS",
+    currentPrice: "$400",
+    originalPrice: "$500",
+    discountPercent: "20% OFF",
+    inventory: 35,
+    inventoryLabel: "Limited Offer!",
+    checklist: [
+      "Reach 3.9B+ monthly active users",
+      "Advanced audience targeting & lookalikes",
+      "Cross-platform ads (Facebook, Instagram, Messenger)",
+      "AI-powered Advantage+ campaigns",
+      "Detailed performance & attribution reporting"
+    ],
+    pros: [
+      "Unmatched audience targeting precision",
+      "Massive user base across platforms",
+      "Strong visual ad formats (Reels, Stories, Carousel)",
+      "20% discount on first campaign spend"
+    ],
+    cons: [
+      "Rising CPM costs in competitive verticals",
+      "iOS privacy changes impact tracking",
+      "Ad fatigue requires frequent creative refreshes"
+    ],
+    faqs: [
+      { q: "How do I claim the 20% OFF deal?", a: "Click Get Deal and the 20% discount is auto-applied to your first Meta Ads campaign when you spend $400 or more." },
+      { q: "Is this available to existing advertisers?", a: "This offer is for new Meta Ads accounts only." },
+      { q: "How long is the offer valid?", a: "The promotional credit must be used within 30 days of account creation." }
+    ],
+    reviews: [
+      { n: "James R.", r: 5, t: "Meta Ads ROI has been incredible for our e-commerce brand. The targeting is second to none." },
+      { n: "Aisha K.", r: 4.5, t: "Great platform for brand awareness and direct response. The 20% off made testing much more affordable." }
+    ],
+    similar: [
+      { brandKey: "googleads", name: "Google Ads", rating: 4.8, off: "40% Bonus" },
+      { brandKey: "semrush", name: "Semrush", rating: 4.8, off: "30% OFF" },
+      { brandKey: "canva", name: "Canva Pro", rating: 4.8, off: "50% OFF" },
+      { brandKey: "clickfunnels", name: "ClickFunnels", rating: 4.7, off: "20% OFF" }
+    ],
+    trustIcons: ["BadgeCheck", "ShieldCheck", "Wallet", "Rocket", "Sparkles", "Globe"],
+    countdownSeconds: 8 * 3600 + 45 * 60 + 0,
+    expiresLabel: "Expires in 4 Days"
   }
 };
 export {

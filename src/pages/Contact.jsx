@@ -48,7 +48,7 @@ export default function Contact() {
             ))}
             {/* map placeholder */}
             <Reveal delay={0.3}>
-              <div className="relative h-64 overflow-hidden rounded-xl bg-indigo-600" role="img" aria-label="Office location map">
+              <div className="relative h-64 overflow-hidden rounded-xl bg-blue-600" role="img" aria-label="Office location map">
                 <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(100,116,139,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(100,116,139,.25) 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
                 <div className="absolute left-1/3 top-0 h-full w-4 -skew-x-12 bg-white/40 dark:bg-white/10" />
                 <div className="absolute left-0 top-1/2 h-3 w-full bg-white/40 dark:bg-white/10" />
