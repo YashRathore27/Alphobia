@@ -22,8 +22,8 @@ function Navbar() {
     /* Logo */
   }
         <button onClick={() => go("home")} className="flex shrink-0 items-center gap-2">
-          <span className="font-heading text-lg font-extrabold tracking-tight text-slate-900">
-            Alpha<span className="gradient-text">obia</span>
+          <span className="font-heading text-lg font-extrabold tracking-tight">
+            <span className="text-slate-900">Al</span><span className="text-indigo-600">phobia</span>
           </span>
         </button>
 
