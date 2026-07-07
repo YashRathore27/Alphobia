@@ -256,7 +256,7 @@ const BRANDS = {
   hostinger: { bg: "linear-gradient(135deg,#673DE6,#8C6CF0)", label: "Hostinger", image: "/images/hostinger-icon.png" },
   envato: { bg: "linear-gradient(135deg,#81B441,#5A9E2F)", label: "Envato", image: "/images/envato.png" },
   chatgpt: { bg: "#0FA47F", label: "ChatGPT", image: "/images/chatgpt-icon.png" },
-  ahrefs: { bg: "#054ADA", label: "ahrefs" },
+  ahrefs: { bg: "#054ADA", label: "ahrefs", image: "/images/AhrefsLogo.png" },
   mailchimp: { bg: "#FFE01B", fg: "#241C15", label: "Mailchimp", image: "/images/mailchimp-icon.png" },
   hubspot: { bg: "#FF7A59", label: "HubSpot", image: "/images/hubspot-icon.png" },
   grammarly: { bg: "#15C39A", label: "Grammarly", image: "/images/grammarly-icon.png" },

@@ -26,17 +26,17 @@ function ProductOffers() {
     const badge = BADGE_MAP[id];
     return <Reveal key={id} delay={i * 0.07}>
                 <div className="card card-hover flex h-full flex-col p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="h-[100px] w-full overflow-hidden rounded-xl bg-slate-100">
-                      <img
-      src={data.image}
-      alt={data.name}
-      className="h-full w-full object-cover"
-    />
-                    </div>
-                    {data.rating >= 4.7 && <span className="shrink-0 rounded-full bg-amber-50 px-2.5 py-1 text-[10px] font-bold text-amber-600 ring-1 ring-amber-200">
+                  <div className="relative h-[180px] w-full overflow-hidden rounded-xl bg-slate-100">
+                    <img
+                      src={data.image}
+                      alt={data.name}
+                      className="h-full w-full object-cover"
+                    />
+                    {data.rating >= 4.7 && (
+                      <span className="absolute top-2 right-2 rounded-full bg-amber-50 px-2.5 py-1 text-[10px] font-bold text-amber-600 ring-1 ring-amber-200 shadow-sm">
                         Top Rated
-                      </span>}
+                      </span>
+                    )}
                   </div>
                   <h3 className="mt-3 text-[16px] font-bold text-slate-900">{data.name}</h3>
                   <Rating value={data.rating} className="mt-1" />
